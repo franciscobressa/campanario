@@ -31,14 +31,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Campanário
+                    <img src="img/logo.png" class="logo">
                 </div>
 
                 <div class="links">
-                    <a href="#">Ervas</a>
-                    <a href="#">Cuias</a>
-                    <a href="#">Bombas</a>
-                    <a href="#">Sobre nós</a>
+                    <a href="#">Loja Virtual</a>
+                    <a href="#">Nossa Empresa</a>
                 </div>
             </div>
         </div>
