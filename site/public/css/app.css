@@ -10938,10 +10938,10 @@ a.text-dark:focus {
   min-height: 350px;
   background: no-repeat center center scroll;
   background-size: cover;
+  padding-bottom: 500px;
 }
 
-.navbar,
-.container {
-  background-color: #CC0A00 !important;
+a {
+  color: #0e592e;
 }
 
