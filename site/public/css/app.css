@@ -11,7 +11,11 @@
   --blue: #3490dc;
   --indigo: #6574cd;
   --purple: #9561e2;
-  --pink: #f66d9b;
+  .nav-link{
+    font-size: 1vw;
+    letter-spacing: 0.168em;
+    margin: 0 0.6vw;
+  }  --pink: #f66d9b;
   --red: #e3342f;
   --orange: #f6993f;
   --yellow: #ffed4a;
@@ -10932,8 +10936,27 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
 /*TOP NAVBAR SOCIAL MEDIA*/
+
+.social{
+  height: 25px !important;
+  margin: 0 0.3vw;
+}
+
+.div-social{
+  border-left: 1.5px solid lightgray;
+  padding-left 1vw;
+}
+
+.idioma{
+  height: 25px !important;
+  margin: 0 0.3vw;
+}
+
+.div-idioma{
+  border-left: 1.5px solid lightgray;
+  padding-left 1vw;
+}
 
 .top-navbar{
   background-color: rgba(233, 227, 227, 0.089);
@@ -10976,19 +10999,27 @@ a.text-dark:focus {
 /* Navbar */
 
 .navbar-brand {
-  height: 18.05vh;
-  width: 18.05vh;
+  height: 10vw;
+  width: 10vw;
   background-image: url(/images/logo.png?5e1f1d12a37b91bc06a49ce74741a7c8);
   background-size: cover;
   margin: 0 5vh;
 }
 
-.nav-link{
-  letter-spacing: 0.168em;
-  margin: 0 0.4vw;
+.brand-sm{
+  display: none;
 }
 
-.nav-item:hover{
+.nav-link{
+  font-size: 100%;
+  letter-spacing: 0.168em;
+}
+
+.nav-item{
+  margin: 0 1.5em;
+}
+
+.nav-item-hover:hover{
   background-color: rgba(56, 193, 114, 0.6);
   transition: 0.5s;
 }
@@ -10996,15 +11027,41 @@ a.text-dark:focus {
 .nav-link:hover{
   color:white !important;
 }
-
+.navbar-bottom{
+  border-bottom-style: solid;
+  border-bottom-color: green;
+}
 /* SEARCH BAR */
-
-.form-control{
-  width: 60% !important;
+.search-box{
+  background: white;
+  border-radius: 25px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
 }
 
-.form-inline button{
-  font-size: 1em;
+input:active{
+  outline: none !important;
+  border: none !important;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.form-control{
+  width: 80% !important;
+  border:none;
+  background: none;
+  outline:none !important;
+  /* color:  !important; */
+}
+.search-btn img{
+  height: 2vw !important;
 }
 
 #search{
@@ -11026,8 +11083,12 @@ a.text-dark:focus {
 
 @media only screen and (max-width: 1200px) {
   .navbar-brand {
-    height: 12vh;
-    width: 12vh;
+    height: 120px;
+    width: 120px;
+  }
+  
+  .nav-item{
+    font-size: 95%;
   }
 
   .nav-link{
@@ -11041,6 +11102,7 @@ a.text-dark:focus {
   .top-navbar{
     display:none;
   }
+
 
   .btn-instagram{
     padding:1px;
@@ -11057,6 +11119,10 @@ a.text-dark:focus {
     background: no-repeat center center scroll;
     background-size: cover;
   }
+  
+  .brand-desk{
+    display: none;
+  }
 
   .navbar-brand {
     height: 5em;
@@ -11064,7 +11130,7 @@ a.text-dark:focus {
   }
   
   .nav-item{
-    margin: 1em 0;
+    margin: 0.5em 0 !important;
   }
   .nav-item:hover{
     background:none;
