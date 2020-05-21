@@ -10933,15 +10933,165 @@ a.text-dark:focus {
   }
 }
 
-.carousel-item {
-  height: 65vh;
-  min-height: 350px;
-  background: no-repeat center center scroll;
-  background-size: cover;
-  padding-bottom: 500px;
+/*TOP NAVBAR SOCIAL MEDIA*/
+
+.top-navbar{
+  background-color: rgba(233, 227, 227, 0.089);
 }
 
-a {
-  color: #0e592e;
+.btn-instagram{
+  background-image: url(../img/icon/instagram.png);
+  background-size: cover;
+  min-width: 15vh;
+  min-height: 5vh;
+  padding:1px;
+  margin: 0 6vh;
+}
+
+.btn-shop{
+  background-image: url(../img/icon/shop.png);
+  min-height: 5vh;
+  min-width: 5vh;
+  background-size: cover;
+  margin: 0 3vh;
+  opacity: 0.6;
+
+}
+
+.btn-user{
+  background-image: url(../img/icon/avatar.png);
+  min-height: 5vh;
+  background-size: cover;
+  min-width: 5vh;
+  margin: 0 5vh 0 0;
+  opacity: 0.6;
+
+}
+
+.title{
+  display: none;
+}
+
+
+/* Navbar */
+
+.navbar-brand {
+  height: 18.05vh;
+  width: 18.05vh;
+  background-image: url(/images/logo.png?5e1f1d12a37b91bc06a49ce74741a7c8);
+  background-size: cover;
+  margin: 0 5vh;
+}
+
+.nav-link{
+  letter-spacing: 0.168em;
+  margin: 0 0.4vw;
+}
+
+.nav-item:hover{
+  background-color: rgba(56, 193, 114, 0.6);
+  transition: 0.5s;
+}
+
+.nav-link:hover{
+  color:white !important;
+}
+
+/* SEARCH BAR */
+
+.form-control{
+  width: 60% !important;
+}
+
+.form-inline button{
+  font-size: 1em;
+}
+
+#search{
+  display: none;
+}
+
+#searchsm{
+  display: inline-block;
+}
+
+/* BANNER ROTATIVO */
+
+.carousel-item {
+  height: 25em;
+  min-height: 20em;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-brand {
+    height: 12vh;
+    width: 12vh;
+  }
+
+  .nav-link{
+    letter-spacing: 0;
+    margin: 0;
+  }
+  
+}
+
+@media only screen and (max-width: 990px) {
+  .top-navbar{
+    display:none;
+  }
+
+  .btn-instagram{
+    padding:1px;
+    margin: 0;
+    display: none;
+  }
+
+  .title{
+    display: inline;
+  }
+  .carousel-item {
+    height: 20em;
+    min-height: 20em;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+
+  .navbar-brand {
+    height: 5em;
+    width: 5em;
+  }
+  
+  .nav-item{
+    margin: 1em 0;
+  }
+  .nav-item:hover{
+    background:none;
+  }
+
+  .nav-link:hover{
+    color:black !important;
+  }
+
+  .nav-search{
+    justify-content: flex-end !important;
+  }
+
+  #search{
+    display: none;
+  }
+  
+  #searchsm{
+    display: none;
+  }
+
+  #usuario{
+    display: inline-block;
+  }
+
+  .usuario{
+    display: inline-block;
+  }
 }
 
