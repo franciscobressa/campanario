@@ -11,14 +11,6 @@
   box-shadow:  inset 0 0 70px 0 lightgrey !important;
 }
 
-.navbar-brand{
-  height: 18.05vh;
-  width: 18.05vh;
-  background-image: url(../../public/img/logo.png);
-  background-size: cover;
-}
- 
-
 .carousel-item {
   height: 65vh;
   min-height: 350px;
@@ -28,5 +20,230 @@
   -o-background-size: cover;
   background-size: cover;
   padding-bottom: 500px;
+}
+
+/*TOP NAVBAR SOCIAL MEDIA*/
+
+.social{
+  height: 25px !important;
+  margin: 0 0.3vw;
+}
+
+.div-social{
+  border-left: 1.5px solid lightgray;
+  padding-left: 1vw;
+}
+
+.idioma{
+  height: 25px !important;
+  margin: 0 0.3vw;
+}
+
+.div-idioma{
+  border-left: 1.5px solid lightgray;
+  padding-left: 1vw;
+}
+
+.top-navbar{
+  background-color: rgba(233, 227, 227, 0.089);
+}
+
+.btn-instagram{
+  background-image: url(/img/icon/instagram.png);
+  background-size: cover;
+  min-width: 15vh;
+  min-height: 5vh;
+  padding:1px;
+  margin: 0 6vh;
+}
+
+.btn-shop{
+  background-image: url(/img/icon/shop.png);
+  min-height: 5vh;
+  min-width: 5vh;
+  background-size: cover;
+  margin: 0 3vh;
+  opacity: 0.6;
+
+}
+
+.btn-user{
+  background-image: url(/img/icon/avatar.png);
+  min-height: 5vh;
+  background-size: cover;
+  min-width: 5vh;
+  margin: 0 5vh 0 0;
+  opacity: 0.6;
+
+}
+
+.title{
+  display: none;
+}
+
+
+/* Navbar */
+
+.navbar-brand {
+  height: 8vw;
+  width: 8vw;
+  background-image: url(/images/logo.png?5e1f1d12a37b91bc06a49ce74741a7c8);
+  background-size: cover;
+  margin: 0 5vh;
+}
+
+.brand-sm{
+  display: none;
+}
+
+.nav-link{
+  font-size: 100%;
+  letter-spacing: 0.168em;
+}
+
+.nav-item{
+  margin: 0 1.5em;
+}
+
+.nav-item-hover:hover{
+  background-color: rgba(56, 193, 114, 0.6);
+  transition: 0.5s;
+}
+
+.nav-link:hover{
+  color:white !important;
+}
+
+.navbar-bottom{
+  border-bottom-style: solid;
+  border-bottom-color: green;
+}
+
+/* SEARCH BAR */
+.search-box{
+  background: white;
+  border-radius: 25px;
+  border: solid;
+  border-width: 1px;
+  border-color: gray;
+ 
+}
+
+.form-control{
+  width: 80% !important;
+  border:none;
+  background: none;
+  outline:none !important;
+  border-radius: 25px;
+}
+
+input:focus{
+  outline: 0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+
+.search-btn{
+   img{
+    height: 1.2vw;
+    opacity: 0.5;
+   }
+}
+
+#search{
+  display: none;
+}
+
+#searchsm{
+  display: inline-block;
+}
+
+/* BANNER ROTATIVO */
+
+.carousel-item {
+  height: 25em;
+  min-height: 20em;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-brand {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .nav-item{
+    font-size: 95%;
+  }
+
+  .nav-link{
+    letter-spacing: 0;
+    margin: 0;
+  }
+  
+}
+
+@media only screen and (max-width: 990px) {
+  .top-navbar{
+    display:none;
+  }
+
+
+  .btn-instagram{
+    padding:1px;
+    margin: 0;
+    display: none;
+  }
+
+  .title{
+    display: inline;
+  }
+  .carousel-item {
+    height: 20em;
+    min-height: 20em;
+    background: no-repeat center center scroll;
+    background-size: cover;
+  }
+  
+  .brand-desk{
+    display: none;
+  }
+
+  .navbar-brand {
+    height: 5em;
+    width: 5em;
+  }
+  
+  .nav-item{
+    margin: 0.5em 0 !important;
+  }
+  .nav-item:hover{
+    background:none;
+  }
+
+  .nav-link:hover{
+    color:black !important;
+  }
+
+  .nav-search{
+    justify-content: flex-end !important;
+  }
+
+  #search{
+    display: none;
+  }
+  
+  #searchsm{
+    display: none;
+  }
+
+  #usuario{
+    display: inline-block;
+  }
+
+  .usuario{
+    display: inline-block;
+  }
 }
 

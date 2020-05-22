@@ -21,7 +21,7 @@
   <div class="container-idioma" style="display: inline-flex" >
     <ul class="navbar-nav">
       <li class="nav-item" style="margin: 0 10px !important">
-    <span >Idioma   </span>
+    <span >Idioma </span>
       </li>
     </ul>
   <div class="div-idioma">
