@@ -21,7 +21,7 @@
   <div class="container-idioma" style="display: inline-flex" >
     <ul class="navbar-nav">
       <li class="nav-item" style="margin: 0 10px !important">
-    <span >Idioma </span>
+          <span >Idioma </span>
       </li>
     </ul>
   <div class="div-idioma">
@@ -34,7 +34,7 @@
   <div class="container-social" style="display: inline-flex" >
     <ul class="navbar-nav">
       <li class="nav-item" style="margin: 0 10px !important">
-    <span >Redes Sociais    </span>
+           <span >Redes Sociais</span>
       </li>
     </ul>
   <div class="div-social">
@@ -47,15 +47,12 @@
 
 <nav class="navbar navbar-expand-lg navbar-light" >
   <div class="container-fluid">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-brand brand-sm" href="#">
     </div>
       
-      
-          
-     
         <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
           <ul class="navbar-nav">
 
@@ -71,8 +68,7 @@
             </li>
             <li class="nav-item my-auto brand-desk ">
               <div class="navbar-brand" href="#">
-              </div>          
-              
+              </div>           
             </li>
             <li class="nav-item nav-item-hover my-auto ">
               <a class="nav-link" href="#">Fale Conosco</a>
@@ -90,9 +86,9 @@
 
         <div class="search-box">
           <form class="form-inline" id="searchsm">
-                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+                <input class="form-control" type="search" placeholder="Pesquisar..." aria-label="Search">
                 <a class="search-btn" href="#" >
-                <img  src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3OC4yMDggNDc4LjIwOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc4LjIwOCA0NzguMjA4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDczLjQxOCw0NDkuMjg1TDMwMy4yOCwyNzkuMTQ4YzU5Ljc1OS03My4wODcsNDguOTU0LTE4MC43NzktMjQuMTMyLTI0MC41MzhTOTguMzY5LTEwLjM0NCwzOC42MSw2Mi43NDIgICAgUy0xMC4zNDQsMjQzLjUyMSw2Mi43NDIsMzAzLjI4YzYyLjk1Myw1MS40NzMsMTUzLjQ1Myw1MS40NzMsMjE2LjQwNiwwbDE3MC4xMzgsMTcwLjEzOGM2Ljc4LDYuNTQ4LDE3LjU4NCw2LjM2LDI0LjEzMi0wLjQyICAgIEM0NzkuODA1LDQ2Ni4zODQsNDc5LjgwNSw0NTUuODk5LDQ3My40MTgsNDQ5LjI4NXogTTE3MS4yMTgsMzA3Ljc1MWMtNzUuMzctMC4wODUtMTM2LjQ0OS02MS4xNjMtMTM2LjUzMy0xMzYuNTMzICAgIGMwLTc1LjQwNSw2MS4xMjgtMTM2LjUzMywxMzYuNTMzLTEzNi41MzNzMTM2LjUzMyw2MS4xMjgsMTM2LjUzMywxMzYuNTMzUzI0Ni42MjMsMzA3Ljc1MSwxNzEuMjE4LDMwNy43NTF6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+                    <img  src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3OC4yMDggNDc4LjIwOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDc4LjIwOCA0NzguMjA4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDczLjQxOCw0NDkuMjg1TDMwMy4yOCwyNzkuMTQ4YzU5Ljc1OS03My4wODcsNDguOTU0LTE4MC43NzktMjQuMTMyLTI0MC41MzhTOTguMzY5LTEwLjM0NCwzOC42MSw2Mi43NDIgICAgUy0xMC4zNDQsMjQzLjUyMSw2Mi43NDIsMzAzLjI4YzYyLjk1Myw1MS40NzMsMTUzLjQ1Myw1MS40NzMsMjE2LjQwNiwwbDE3MC4xMzgsMTcwLjEzOGM2Ljc4LDYuNTQ4LDE3LjU4NCw2LjM2LDI0LjEzMi0wLjQyICAgIEM0NzkuODA1LDQ2Ni4zODQsNDc5LjgwNSw0NTUuODk5LDQ3My40MTgsNDQ5LjI4NXogTTE3MS4yMTgsMzA3Ljc1MWMtNzUuMzctMC4wODUtMTM2LjQ0OS02MS4xNjMtMTM2LjUzMy0xMzYuNTMzICAgIGMwLTc1LjQwNSw2MS4xMjgtMTM2LjUzMywxMzYuNTMzLTEzNi41MzNzMTM2LjUzMyw2MS4xMjgsMTM2LjUzMywxMzYuNTMzUzI0Ni42MjMsMzA3Ljc1MSwxNzEuMjE4LDMwNy43NTF6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
                 </a>
           </form>
         </div>

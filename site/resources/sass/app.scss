@@ -9,6 +9,16 @@
 
 .navbar{
   box-shadow:  inset 0 0 70px 0 lightgrey !important;
+  color: rgb(112, 112, 112);
+}
+
+.carousel-indicators{
+  li{
+    border-radius: 40px;
+    border: none;
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .carousel-item {
@@ -84,10 +94,14 @@
 
 /* Navbar */
 
+.collapse{
+  margin-left: 10vw;
+}
+
 .navbar-brand {
   height: 8vw;
   width: 8vw;
-  background-image: url(/images/logo.png?5e1f1d12a37b91bc06a49ce74741a7c8);
+  background-image: url(/img/logo.png);
   background-size: cover;
   margin: 0 5vh;
 }
@@ -103,10 +117,11 @@
 
 .nav-item{
   margin: 0 1.5em;
+  border-radius: 5px;
 }
 
 .nav-item-hover:hover{
-  background-color: rgba(56, 193, 114, 0.6);
+  background-color: rgba(21, 182, 88, 0.6);
   transition: 0.5s;
 }
 
@@ -125,8 +140,7 @@
   border-radius: 25px;
   border: solid;
   border-width: 1px;
-  border-color: gray;
- 
+  border-color: rgb(167, 167, 167);
 }
 
 .form-control{
@@ -135,11 +149,10 @@
   background: none;
   outline:none !important;
   border-radius: 25px;
+  color: gray !important;
 }
 
 input:focus{
-  outline: 0px !important;
-  -webkit-appearance:none;
   box-shadow: none !important;
 }
 
@@ -168,6 +181,7 @@ input:focus{
 }
 
 @media only screen and (max-width: 1200px) {
+  
   .navbar-brand {
     height: 120px;
     width: 120px;
@@ -189,6 +203,9 @@ input:focus{
     display:none;
   }
 
+  .collapse{
+    margin-left: 0vw;
+  }
 
   .btn-instagram{
     padding:1px;
@@ -213,6 +230,7 @@ input:focus{
   .navbar-brand {
     height: 5em;
     width: 5em;
+    /*background-image: url(/img/logo.png);*/
   }
   
   .nav-item{
