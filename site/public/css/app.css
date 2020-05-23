@@ -10931,6 +10931,10 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+
+  .fill-div{
+    display: block;
+  }
 }
 
 .navbar {
@@ -10955,19 +10959,47 @@ a.text-dark:focus {
 
 /*TOP NAVBAR SOCIAL MEDIA*/
 
-.social {
+.icon {
   height: 25px !important;
+  width: 25px !important;
   margin: 0 0.3vw;
 }
 
 .div-social {
   border-left: 1.5px solid lightgray;
   padding-left: 1vw;
+  display: inline-flex;
+
+}
+
+#facebook{
+  background-image: url(/img/icon/social/facebook.png);
+  background-size: cover;
+}
+
+#instagram{
+  background-image: url(/img/icon/social/instagram.png);
+  background-size: cover;
+}
+
+.div-idioma{
+  display: inline-flex;
 }
 
 .idioma {
   height: 25px !important;
+  width: 25px !important;
   margin: 0 0.3vw;
+}
+
+#portuguese{
+  background-image: url(/img/icon/idioma/portuguese.png);
+  background-size: cover;
+}
+
+#spanish{
+  background-image: url(/img/icon/idioma/spanish.png);
+  background-size: cover;
 }
 
 .div-idioma {
