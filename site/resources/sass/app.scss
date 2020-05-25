@@ -155,6 +155,7 @@ section{
 .nav-item{
   margin: 0 1.5em;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 .nav-item-hover:hover{
@@ -171,13 +172,16 @@ section{
   border-bottom-color: green;
 }
 
-/* SEARCH BAR */
+/* SEARCH BAR AND CART*/
 .search-box{
-  background: white;
   border-radius: 25px;
-  border: solid;
   border-width: 1px;
   border-color: rgb(167, 167, 167);
+}
+
+.cart-btn{
+  height: 1.2vw;
+  background-color: red;
 }
 
 .form-control{
@@ -218,7 +222,7 @@ input:focus{
 }
 
 @media only screen and (max-width: 1200px) {
-  
+
   .navbar-brand {
     height: 120px;
     width: 120px;
@@ -236,8 +240,11 @@ input:focus{
 }
 
 @media only screen and (max-width: 990px) {
-  .top-navbar{
-    display:none;
+ 
+  .icon {
+    height: 20px !important;
+    width: 20px !important;
+    margin: 0 0.3vw;
   }
 
   .collapse{
