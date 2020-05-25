@@ -180,8 +180,9 @@ section{
 }
 
 .cart-btn{
+  img{
   height: 1.2vw;
-  background-color: red;
+  }
 }
 
 .form-control{
@@ -241,21 +242,17 @@ input:focus{
 
 @media only screen and (max-width: 990px) {
  
-  .icon {
+  .icon{
     height: 20px !important;
     width: 20px !important;
-    margin: 0 0.3vw;
+    margin: 0 2px;
   }
 
   .collapse{
     margin-left: 0vw;
   }
 
-  .btn-instagram{
-    padding:1px;
-    margin: 0;
-    display: none;
-  }
+
 
   .title{
     display: inline;
