@@ -37227,6 +37227,15 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$('.link-interno').click(function (e) {
+  e.preventDefault();
+  var link = $(this).attr('href'),
+      target = $(link).offset().top;
+  $('html, body').animate({
+    scrollTop: target
+  }, 800);
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

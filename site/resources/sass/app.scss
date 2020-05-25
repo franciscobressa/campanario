@@ -7,9 +7,20 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .navbar{
   box-shadow:  inset 0 0 70px 0 lightgrey !important;
   color: rgb(112, 112, 112);
+}
+
+section{
+  padding: 20px;
+  text-align: justify;
 }
 
 .carousel-indicators{
@@ -34,60 +45,86 @@
 
 /*TOP NAVBAR SOCIAL MEDIA*/
 
-.social{
+.icon {
   height: 25px !important;
+  width: 25px !important;
   margin: 0 0.3vw;
 }
 
-.div-social{
+.div-social {
   border-left: 1.5px solid lightgray;
   padding-left: 1vw;
+  display: inline-flex;
+
 }
 
-.idioma{
-  height: 25px !important;
-  margin: 0 0.3vw;
+#facebook{
+  background-image: url(/img/icon/social/facebook.png);
+  background-size: cover;
+}
+
+#instagram{
+  background-image: url(/img/icon/social/instagram.png);
+  background-size: cover;
 }
 
 .div-idioma{
+  display: inline-flex;
+}
+
+.idioma {
+  height: 25px !important;
+  width: 25px !important;
+  margin: 0 0.3vw;
+}
+
+#portuguese{
+  background-image: url(/img/icon/idioma/portuguese.png);
+  background-size: cover;
+}
+
+#spanish{
+  background-image: url(/img/icon/idioma/spanish.png);
+  background-size: cover;
+}
+
+.div-idioma {
   border-left: 1.5px solid lightgray;
   padding-left: 1vw;
 }
 
-.top-navbar{
+.top-navbar {
   background-color: rgba(233, 227, 227, 0.089);
 }
 
-.btn-instagram{
+.btn-instagram {
   background-image: url(/img/icon/instagram.png);
   background-size: cover;
   min-width: 15vh;
   min-height: 5vh;
-  padding:1px;
+  padding: 1px;
   margin: 0 6vh;
 }
 
-.btn-shop{
+.btn-shop {
   background-image: url(/img/icon/shop.png);
   min-height: 5vh;
   min-width: 5vh;
   background-size: cover;
   margin: 0 3vh;
   opacity: 0.6;
-
 }
 
-.btn-user{
+.btn-user {
   background-image: url(/img/icon/avatar.png);
   min-height: 5vh;
   background-size: cover;
   min-width: 5vh;
   margin: 0 5vh 0 0;
   opacity: 0.6;
-
 }
 
-.title{
+.title {
   display: none;
 }
 
