@@ -10935,7 +10935,6 @@ a.text-dark:focus {
 
 body {
   margin: 0px;
-  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -11093,14 +11092,16 @@ section {
 
 /* SEARCH BAR AND CART*/
 
-.search-box {
-  border-radius: 25px;
-  border-width: 1px;
-  border-color: #a7a7a7;
+.menu-box {
+  margin: 0 50px;
+  width: 5vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cart-btn img {
-  height: 1.2vw;
+  height: 1.5vw;
+  opacity: 0.6;
 }
 
 .form-control {
@@ -11116,8 +11117,12 @@ input:focus {
   box-shadow: none !important;
 }
 
+.search-btn {
+  float: left;
+}
+
 .search-btn img {
-  height: 1.2vw;
+  height: 1.5vw;
   opacity: 0.5;
 }
 
