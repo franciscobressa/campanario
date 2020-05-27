@@ -11115,7 +11115,11 @@ input:focus {
 }
 
 .nossa-empresa div {
-  padding-bottom: 10%;
+  padding-bottom: 40%;
+}
+
+.nossa-empresa div h1 {
+  font-family: "Bebas Neue", cursive;
 }
 
 .div-text {
