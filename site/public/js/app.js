@@ -37241,6 +37241,43 @@ $('.link-interno').click(function (e) {
     scrollTop: target - header + 1
   }, 800);
 });
+var color = true;
+
+var searchFunc = function searchFunc() {
+  var input = $('.search-input');
+  var box = $('.search-box');
+
+  if (input.css('width') == '0px') {
+    input.animate({
+      width: '10vw'
+    });
+    box.css('background-color', '#fff');
+    color = false;
+  } else {
+    input.animate({
+      width: '0'
+    });
+    box.css('border-color', 'gray');
+    box.css('background-color', 'transparent');
+    color = true;
+  }
+};
+
+$('.search-btn').click(searchFunc);
+$(document).click(function (e) {
+  var searchBox = document.querySelector('.search-box'); // console.log(e.target);
+
+  if (!searchBox.contains(e.target)) {
+    if ($('.search-input').css('width') != '0px') searchFunc();
+  }
+});
+$('.search-btn').hover(function () {
+  $('.search-box').css('border-color', 'rgb(0, 158, 0)');
+}, function () {
+  if (color) {
+    $('.search-box').css('border-color', 'gray');
+  }
+});
 
 /***/ }),
 
@@ -37307,8 +37344,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\campanario\site\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\campanario\site\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/campanario/site/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/campanario/site/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
