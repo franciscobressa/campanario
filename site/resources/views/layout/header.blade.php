@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/app.css">
     <title>{{config('app.name')}}</title>
     <link rel="icon" href="{{ URL::asset('img/favicon.png') }}" type="image/x-icon"/>
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
 </head>
 <body>
 <header class="fixed-top bg-light">
@@ -63,27 +64,25 @@
       
         <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
           <ul class="navbar-nav">
-
-           
             <li class="nav-item nav-item-hover my-auto ">
            </li>
             <li class="nav-item nav-item-hover my-auto ">
-                <a class="nav-link link-interno" href="#pagina-inicial">Página Inicial</a>
+                <a class="nav-link link-interno" href="#inicio">Início</a>
             </li>
 
             <li class="nav-item nav-item-hover my-auto ">
-              <a class="nav-link link-interno" href="#produtos">Produtos</a>
+              <a class="nav-link link-interno" href="#nossa-empresa">Nossa Empresa</a>
             </li>
             <li class="nav-item my-auto brand-desk ">
               <div class="navbar-brand" href="#">
               </div>           
             </li>
             <li class="nav-item nav-item-hover my-auto ">
-              <a class="nav-link link-interno" href="#fale-conosco">Fale Conosco</a>
+              <a class="nav-link link-interno" href="#produtos">Produtos</a>
             </li>
             
             <li class="nav-item nav-item-hover my-auto ">
-              <a class="nav-link link-interno" href="#sobre-nos">Sobre Nós</a>
+              <a class="nav-link link-interno" href="#fale-conosco">Fale Conosco</a>
             </li>
             <li class="nav-item nav-item-hover my-auto ">
             </li>
@@ -109,7 +108,7 @@
         
       </nav>
 
-      <nav class="navbar navbar-bottom " ></nav>
+      <nav class="navbar navbar-bottom"></nav>
     </header>
     
       @yield('content')

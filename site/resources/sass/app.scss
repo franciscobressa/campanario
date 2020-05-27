@@ -10,6 +10,7 @@
 body{
   margin: 0px;
   box-sizing: border-box;
+  
 }
 
 .navbar{
@@ -22,24 +23,9 @@ section{
   text-align: justify;
 }
 
-.carousel-indicators{
-  li{
-    border-radius: 40px;
-    border: none;
-    width: 10px;
-    height: 10px;
-  }
-}
-
-.carousel-item {
-  height: 65vh;
-  min-height: 350px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-bottom: 500px;
+.banner{
+  height: 17%;
+  padding:0;
 }
 
 /*TOP NAVBAR SOCIAL MEDIA*/
@@ -104,29 +90,6 @@ section{
   padding: 1px;
   margin: 0 6vh;
 }
-
-.btn-shop {
-  background-image: url(/img/icon/shop.png);
-  min-height: 5vh;
-  min-width: 5vh;
-  background-size: cover;
-  margin: 0 3vh;
-  opacity: 0.6;
-}
-
-.btn-user {
-  background-image: url(/img/icon/avatar.png);
-  min-height: 5vh;
-  background-size: cover;
-  min-width: 5vh;
-  margin: 0 5vh 0 0;
-  opacity: 0.6;
-}
-
-.title {
-  display: none;
-}
-
 
 /* Navbar */
 
@@ -217,12 +180,35 @@ input:focus{
 
 /* BANNER ROTATIVO */
 
-.carousel-item {
-  height: 25em;
-  min-height: 20em;
-  background: no-repeat center center scroll;
-  background-size: cover;
+.nossa-empresa{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color:white !important;
+  letter-spacing: 0.1em;
+  background-color:rgba(94, 201, 137, 0.794); ;
+
+  div{
+  padding-bottom: 50%;
+  }
 }
+
+.div-text{
+  padding-bottom: 50%;
+
+}
+
+.section-background{
+  background-image: url(/img/erva.png) ;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  
+
+}
+
 
 @media only screen and (max-width: 1200px) {
 
