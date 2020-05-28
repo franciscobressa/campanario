@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/app.css">
     <title>{{config('app.name')}}</title>
     <link rel="icon" href="{{ URL::asset('img/favicon.png') }}" type="image/x-icon"/>
-     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
 <header class="fixed-top bg-light">
