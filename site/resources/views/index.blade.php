@@ -31,11 +31,11 @@
             <div class="card">
                 
                 <div class="card-body">
-                    <form  method="post">
+                    <form  action="/enviar" method="post">
                     {{ csrf_field() }}
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" name="name" required>
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" name="nome" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email address</label>

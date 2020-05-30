@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PageController@index');
 
 Route::get('/loja', 'PageController@loja');
+
+Route::post('/enviar', 'ContatoController@enviaContato');
