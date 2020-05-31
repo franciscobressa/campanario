@@ -31,7 +31,7 @@
             <div class="card">
                 
                 <div class="card-body">
-                    <form  action="/enviar" method="post">
+                    <form  action="{{ url('enviar')  }}" method="post">
                     {{ csrf_field() }}
                         <div class="form-group">
                             <label for="name">Name</label>

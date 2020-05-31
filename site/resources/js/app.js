@@ -31,7 +31,7 @@ var searchFunc = function(){
         });
 
         box.css('background-color', '#fff')
-
+        
         color = false;
     }else{
         input.animate({
