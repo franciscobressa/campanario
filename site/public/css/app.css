@@ -10943,21 +10943,15 @@ body {
   color: #707070;
 }
 
-section {
-  padding: 20px;
-  text-align: justify;
-}
-
-.banner {
-  height: 17%;
-  padding: 0;
-}
-
 /*TOP NAVBAR SOCIAL MEDIA*/
 
+.top-navbar {
+  background-color: rgba(233, 227, 227, 0.089);
+}
+
 .icon {
-  height: 25px !important;
-  width: 25px !important;
+  height: 1.5vw !important;
+  width: 1.5vw !important;
   margin: 0 0.3vw;
 }
 
@@ -10967,59 +10961,43 @@ section {
   display: inline-flex;
 }
 
-#facebook {
+.div-social #facebook {
   background-image: url(/img/icon/social/facebook.png);
   background-size: cover;
 }
 
-#instagram {
+.div-social #instagram {
   background-image: url(/img/icon/social/instagram.png);
   background-size: cover;
 }
 
 .div-idioma {
   display: inline-flex;
-}
-
-.idioma {
-  height: 25px !important;
-  width: 25px !important;
-  margin: 0 0.3vw;
-}
-
-#portuguese {
-  background-image: url(/img/icon/idioma/portuguese.png);
-  background-size: cover;
-}
-
-#spanish {
-  background-image: url(/img/icon/idioma/spanish.png);
-  background-size: cover;
-}
-
-.div-idioma {
   border-left: 1.5px solid lightgray;
   padding-left: 1vw;
 }
 
-.top-navbar {
-  background-color: rgba(233, 227, 227, 0.089);
+.div-idioma .idioma {
+  height: 1.5vw !important;
+  width: 1.5vw !important;
+  margin: 0 0.3vw;
 }
 
-.btn-instagram {
-  background-image: url(/img/icon/instagram.png);
+.div-idioma #portuguese {
+  background-image: url(/img/icon/idioma/portuguese.png);
   background-size: cover;
-  min-width: 15vh;
-  min-height: 5vh;
-  padding: 1px;
-  margin: 0 6vh;
+}
+
+.div-idioma #spanish {
+  background-image: url(/img/icon/idioma/spanish.png);
+  background-size: cover;
 }
 
 /* Navbar */
 
 .navbar-brand {
-  height: 8vw;
-  width: 8vw;
+  height: 7vw;
+  width: 7vw;
   background-image: url(/img/logo.png);
   background-size: cover;
   margin: 0 5vh;
@@ -11029,15 +11007,15 @@ section {
   display: none;
 }
 
-.nav-link {
-  font-size: 100%;
-  letter-spacing: 0.168em;
-}
-
 .nav-item {
   margin: 0 1.5em;
   border-radius: 5px;
   white-space: nowrap;
+}
+
+.nav-item .nav-link {
+  font-size: 100%;
+  letter-spacing: 0.168em;
 }
 
 .nav-item-hover:hover {
@@ -11113,15 +11091,10 @@ input:focus {
   opacity: 0.5;
 }
 
-#search {
-  display: none;
+.banner {
+  height: 37vw;
+  padding: 0;
 }
-
-#searchsm {
-  display: inline-block;
-}
-
-/* BANNER ROTATIVO */
 
 .nossa-empresa {
   display: flex;
@@ -11129,20 +11102,47 @@ input:focus {
   flex-direction: row;
   flex-wrap: wrap;
   color: white !important;
-  letter-spacing: 0.1em;
-  background-color: rgba(94, 201, 137, 0.794);
+  letter-spacing: 0.2em;
+  background-color: rgba(79, 172, 116, 0.794);
+  line-height: 2vw;
 }
 
 .nossa-empresa div {
-  padding-bottom: 40%;
+  padding: 1.5vw 1.5vw 4.5vw 1.5vw;
+}
+
+.nossa-empresa div p {
+  font-size: 1.2vw;
 }
 
 .nossa-empresa div h1 {
   font-family: "Bebas Neue", cursive;
+  font-size: 4.4vw;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
 }
 
-.div-text {
-  padding-bottom: 1%;
+.produtos {
+  background-image: url(/img/banner/1.png);
+}
+
+.fale-conosco {
+  background-color: rgba(255, 238, 0, 0.192);
+}
+
+.fale-conosco h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 5vw;
+  color: #ee9632;
+}
+
+.fale-conosco .card-body p {
+  font-size: 1.2vw;
+}
+
+.fale-conosco .card-header,
+.fale-conosco .btn {
+  background-color: rgba(238, 150, 50, 0.74);
 }
 
 .section-background {
@@ -11164,13 +11164,58 @@ input:focus {
     letter-spacing: 0;
     margin: 0;
   }
+
+  .nossa-empresa {
+    letter-spacing: 0.2em;
+    line-height: 2.5vw;
+  }
+
+  .nossa-empresa div p {
+    font-size: 1.8vw;
+  }
+
+  .nossa-empresa div h1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 5vw;
+  }
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 992px) {
+  .section-background {
+    display: none;
+  }
+
   .icon {
     height: 20px !important;
     width: 20px !important;
     margin: 0 2px;
+  }
+
+  .nossa-empresa div {
+    padding: 4%;
+    background-image: url(/img/erva2.png);
+    background-size: cover;
+  }
+
+  .nossa-empresa div p {
+    font-size: 2vw;
+    line-height: 200%;
+    padding: 4%;
+    background-color: rgba(94, 160, 94, 0.253);
+  }
+
+  .nossa-empresa div h1 {
+    border-bottom: solid 1px white;
+    font-size: 5vw;
+    background-color: rgba(94, 160, 94, 0.253);
+  }
+
+  .nossa-empresa .navbar-bottom {
+    display: none;
+  }
+
+  .fale-conosco .card-body p {
+    font-size: 5%;
   }
 
   .title {
@@ -11209,21 +11254,57 @@ input:focus {
   .nav-search {
     justify-content: flex-end !important;
   }
+}
 
-  #search {
+@media only screen and (max-width: 768px) {
+  .nossa-empresa div {
+    background-image: url(/img/erva2.png);
+    background-size: 100% 100%;
+  }
+
+  .nossa-empresa div p {
+    font-size: 3.5vw;
+    padding: 3%;
+  }
+
+  .nossa-empresa div h1 {
+    border-bottom: solid 1px white;
+    font-size: 8vw;
+  }
+
+  .banner {
+    height: 40vw;
+  }
+
+  .navbar-bottom {
     display: none;
   }
+}
 
-  #searchsm {
-    display: none;
+@media only screen and (max-width: 600px) {
+  .nossa-empresa div {
+    background-image: url(/img/erva2.png);
+    background-size: 100% 100%;
   }
 
-  #usuario {
-    display: inline-block;
+  .nossa-empresa div p {
+    font-size: 3.5vw;
+    padding: 3%;
+    line-height: 4vw;
   }
 
-  .usuario {
-    display: inline-block;
+  .nossa-empresa div h1 {
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
+    font-size: 8vw;
+  }
+
+  .banner {
+    height: 50vw;
+  }
+
+  .brand-sm {
+    display: inline;
   }
 }
 
