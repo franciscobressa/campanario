@@ -28,6 +28,7 @@ section{
   padding:0;
 }
 
+
 /*TOP NAVBAR SOCIAL MEDIA*/
 
 .icon {
@@ -153,8 +154,9 @@ section{
   border-radius: 40px;
   background-color: transparent;
   border-style: solid;
-  border-color: gray;
+  border-color: transparent;
   border-width: 1px;
+  // margin-right: 1vw;
 }
 
 .cart-btn{
@@ -201,7 +203,7 @@ input:focus{
   display: inline-block;
 }
 
-/* BANNER ROTATIVO */
+/* BANNER  */
 
 .nossa-empresa{
   display: flex;

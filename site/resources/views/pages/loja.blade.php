@@ -15,7 +15,7 @@
                             <a href="#" class="list-group-item">{{$categoria}}</a>
                         </div>
                     @endforeach
-                @endif
+                @endif 
         
               </div>
               <!-- /.col-lg-3 -->
@@ -24,24 +24,27 @@
         
         
                 <div class="row mt-4">
-        
-                @for ($i = 0; $i < 18; $i++)
-                  <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                      <div class="card-body">
-                        <h4 class="card-title">
-                          <a href="#">Item</a>
-                        </h4>
-                        <h5>$24.99</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+
+                @if (count($produtos) > 0)
+                    @foreach ($produtos as $produto)
+                    <div class="col-lg-3 col-md-6 mb-4">
+                      <div class="card h-100">
+                        {{-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> --}}
+                        <a href="#"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
+                        <div class="card-body">
+                          <h4 class="card-title">
+                            <a href="#">{{$produto->nome}}</a>
+                          </h4>
+                          <h5>R${{$produto->preco}}</h5>
+                          <p class="card-text">{{$produto->descricao}}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                @endfor
+                    @endforeach
+                @else
+                    <h2>Não há produtos!</h2>
+                @endif
+      
         
                 </div>
                 <!-- /.row -->
