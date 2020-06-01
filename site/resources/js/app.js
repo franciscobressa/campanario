@@ -27,19 +27,22 @@ var searchFunc = function(){
 
     if(input.css('width') == '0px'){
         input.animate({
-            width: '10vw',
+            width: '10vw'
         });
 
-        box.css('background-color', '#fff')
+        box.css('margin-right', '0.8vw');
+        box.animate({
+            backgroundColor: '#fff'
+        })
         
         color = false;
     }else{
         input.animate({
             width: '0'
         });
-        box.css('border-color', 'gray')
 
-        box.css('background-color', 'transparent')
+        box.css('border-color', 'transparent');
+        box.css('background-color', 'transparent');
 
         color = true;
     }
@@ -48,7 +51,7 @@ var searchFunc = function(){
 $('.search-btn').click(searchFunc);
 
 $(document).click(function(e){
-    let searchBox = document.querySelector('.search-box');
+    var searchBox = document.querySelector('.search-box');
 
     // console.log(e.target);
 
@@ -61,9 +64,10 @@ $(document).click(function(e){
 });
 
 $('.search-btn').hover(function(){
-    $('.search-box').css('border-color', 'rgb(0, 158, 0)')
+    
+    $('.search-box').css('border-color', 'rgb(0, 158, 0)');
 }, function(){
         if(color){
-        $('.search-box').css('border-color', 'gray')
+        $('.search-box').css('border-color', 'transparent')
         }
 })

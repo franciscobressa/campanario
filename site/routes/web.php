@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageController@index');
+Route::get('/', 'PagesController@index');
 
-Route::get('/loja', 'PageController@loja');
+Route::get('/loja', 'ProdutosController@index');
 
 Route::post('/enviar', 'ContatoController@enviaContato');
