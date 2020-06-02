@@ -72,7 +72,7 @@
             </li>
 
             <li class="nav-item nav-item-hover my-auto ">
-              <a class="nav-link link-interno text-center" href="#nossa-empresa">Nossa Empresa</a>
+              <a class="nav-link link-interno" href="#nossa-empresa">Nossa Empresa</a>
             </li>
             <li class="nav-item my-auto brand-desk ">
               <div class="navbar-brand" href="#">

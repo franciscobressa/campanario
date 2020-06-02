@@ -32,8 +32,8 @@ var searchFunc = function(){
 
         box.css('margin-right', '0.8vw');
         box.animate({
-            backgroundColor: '#fff'
-        })
+            backgroundColor: 'rgb(245, 246, 247)'
+        });
         
         color = false;
     }else{
@@ -42,7 +42,7 @@ var searchFunc = function(){
         });
 
         box.css('border-color', 'transparent');
-        box.css('background-color', 'transparent');
+        box.css('background-color', 'rgb(245, 246, 247)');
 
         color = true;
     }

@@ -10943,52 +10943,54 @@ body {
   color: #707070;
 }
 
+/*Card de Compra*/
+
 /*TOP NAVBAR SOCIAL MEDIA*/
 
 .top-navbar {
   background-color: rgba(233, 227, 227, 0.089);
 }
 
-.icon {
-  height: 1.5vw !important;
-  width: 1.5vw !important;
-  margin: 0 0.3vw;
+.top-navbar .icon {
+  height: 20px !important;
+  width: 20px !important;
+  margin: 0 3px;
 }
 
-.div-social {
+.top-navbar .div-social {
   border-left: 1.5px solid lightgray;
   padding-left: 1vw;
   display: inline-flex;
 }
 
-.div-social #facebook {
+.top-navbar .div-social #facebook {
   background-image: url(/img/icon/social/facebook.png);
   background-size: cover;
 }
 
-.div-social #instagram {
+.top-navbar .div-social #instagram {
   background-image: url(/img/icon/social/instagram.png);
   background-size: cover;
 }
 
-.div-idioma {
+.top-navbar .div-idioma {
   display: inline-flex;
   border-left: 1.5px solid lightgray;
   padding-left: 1vw;
 }
 
-.div-idioma .idioma {
-  height: 1.5vw !important;
-  width: 1.5vw !important;
-  margin: 0 0.3vw;
+.top-navbar .div-idioma .idioma {
+  height: 20px !important;
+  width: 20px !important;
+  margin: 0 3px;
 }
 
-.div-idioma #portuguese {
+.top-navbar .div-idioma #portuguese {
   background-image: url(/img/icon/idioma/portuguese.png);
   background-size: cover;
 }
 
-.div-idioma #spanish {
+.top-navbar .div-idioma #spanish {
   background-image: url(/img/icon/idioma/spanish.png);
   background-size: cover;
 }
@@ -11032,7 +11034,7 @@ body {
   border-bottom-color: green;
 }
 
-/* SEARCH BAR AND CART*/
+/* SEARCH BAR AND CAR*/
 
 .menu-box {
   margin: 0 50px;
@@ -11054,26 +11056,15 @@ body {
 .search-box {
   padding: 0.5vw;
   border-radius: 40px;
-  background-color: transparent;
   border-style: solid;
   border-color: transparent;
   border-width: 1px;
-}
-
-.cart-btn img {
-  height: 1.5vw;
-  opacity: 0.6;
-}
-
-input:focus {
-  box-shadow: none !important;
 }
 
 .search-input {
   width: 0;
   padding: 0;
   border: none;
-  background: none;
   color: #707070;
   font-size: 0.8vw;
 }
@@ -11091,9 +11082,25 @@ input:focus {
   opacity: 0.5;
 }
 
+.cart-btn img {
+  height: 1.5vw;
+  opacity: 0.6;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
 .banner {
   height: 37vw;
   padding: 0;
+}
+
+.content-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 4.4vw;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
 }
 
 .nossa-empresa {
@@ -11105,6 +11112,8 @@ input:focus {
   letter-spacing: 0.2em;
   background-color: rgba(79, 172, 116, 0.794);
   line-height: 2vw;
+  text-align: justify;
+  padding: 0 10vw;
 }
 
 .nossa-empresa div {
@@ -11112,22 +11121,39 @@ input:focus {
 }
 
 .nossa-empresa div p {
-  font-size: 1.2vw;
+  font-size: 1.6vw;
 }
 
-.nossa-empresa div h1 {
+.nossa-empresa div .content-title {
   font-family: "Bebas Neue", cursive;
   font-size: 4.4vw;
+  margin: 3vw;
   border-bottom: solid 1px white;
   border-top: solid 1px white;
 }
 
+.texto-2colunas {
+  margin: 0 auto;
+  column-count: 2;
+  column-rule: 1px dotted white;
+  -moz-column-count: 2;
+  -moz-column-rule: 1px dotted white;
+  -webkit-column-count: 2;
+  -webkit-column-rule: 1px dotted white;
+  -o-column-count: 2;
+  -o-column-rule: 1px dotted white;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+
 .produtos {
-  background-image: url(/img/banner/1.png);
+  padding: 4%;
+  background-color: yellow;
 }
 
 .fale-conosco {
   background-color: rgba(255, 238, 0, 0.192);
+  padding: 4%;
 }
 
 .fale-conosco h1 {
@@ -11181,7 +11207,9 @@ input:focus {
 }
 
 @media only screen and (max-width: 992px) {
-  .section-background {
+  .menu-box,
+  .search-box,
+  .cart-btn {
     display: none;
   }
 
@@ -11189,6 +11217,14 @@ input:focus {
     height: 20px !important;
     width: 20px !important;
     margin: 0 2px;
+  }
+
+  .nossa-empresa {
+    padding: 0;
+  }
+
+  .nossa-empresa .div-text {
+    background-color: rgba(94, 160, 94, 0.253);
   }
 
   .nossa-empresa div {
@@ -11231,12 +11267,6 @@ input:focus {
 
   .brand-desk {
     display: none;
-  }
-
-  .navbar-brand {
-    height: 5em;
-    width: 5em;
-    /*background-image: url(/img/logo.png);*/
   }
 
   .nav-item {

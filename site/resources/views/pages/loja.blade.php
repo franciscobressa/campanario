@@ -24,7 +24,9 @@
         
         
                 <div class="row mt-4">
-
+                
+                @for ($i = 0; $i < 18; $i++)
+                    
                 @if (count($produtos) > 0)
                     @foreach ($produtos as $produto)
                     <div class="col-lg-3 col-md-6 mb-4">
@@ -44,7 +46,8 @@
                 @else
                     <h2>Não há produtos!</h2>
                 @endif
-      
+                    
+                @endfor
         
                 </div>
                 <!-- /.row -->

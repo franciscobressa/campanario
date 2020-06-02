@@ -19,6 +19,8 @@ class CreateProdutosTable extends Migration
             $table->string('nome');
             $table->double('preco');
             $table->longText('descricao');
+            $table->bigInteger('id_categoria')->unsigned();
+            $table->foreign('id_categoria')->references('id')->on('categorias');
             $table->timestamps();
         });
     }

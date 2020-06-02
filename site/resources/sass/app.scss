@@ -15,51 +15,55 @@ body{
   color: rgb(112, 112, 112);
 }
 
+/*Card de Compra*/ 
+
+.card{
+
+}
+
 /*TOP NAVBAR SOCIAL MEDIA*/
 
 .top-navbar {
   background-color: rgba(233, 227, 227, 0.089);
-}
+  
+    .icon {
+    height: 20px !important;
+    width: 20px !important;
+    margin: 0 3px;
+  }
+    .div-social {
+    border-left: 1.5px solid lightgray;
+    padding-left: 1vw;
+    display: inline-flex;
+      #facebook{
+      background-image: url(/img/icon/social/facebook.png);
+      background-size: cover;
+    }
+    #instagram{
+      background-image: url(/img/icon/social/instagram.png);
+      background-size: cover;
+    }
+  }
+    .div-idioma{
+    display: inline-flex;
+    border-left: 1.5px solid lightgray;
+    padding-left: 1vw;
 
-.icon {
-  height: 1.5vw !important;
-  width: 1.5vw !important;
-  margin: 0 0.3vw;
-}
+    .idioma {
+    height: 20px !important;
+    width: 20px !important;
+    margin: 0 3px;
+    }
 
-.div-social {
-  border-left: 1.5px solid lightgray;
-  padding-left: 1vw;
-  display: inline-flex;
-    #facebook{
-    background-image: url(/img/icon/social/facebook.png);
+    #portuguese{
+    background-image: url(/img/icon/idioma/portuguese.png);
     background-size: cover;
-  }
-   #instagram{
-    background-image: url(/img/icon/social/instagram.png);
+    }
+
+    #spanish{
+    background-image: url(/img/icon/idioma/spanish.png);
     background-size: cover;
-  }
-}
-
-.div-idioma{
-  display: inline-flex;
-  border-left: 1.5px solid lightgray;
-  padding-left: 1vw;
-
-  .idioma {
-  height: 1.5vw !important;
-  width: 1.5vw !important;
-  margin: 0 0.3vw;
-  }
-
-  #portuguese{
-  background-image: url(/img/icon/idioma/portuguese.png);
-  background-size: cover;
-  }
-
-  #spanish{
-  background-image: url(/img/icon/idioma/spanish.png);
-  background-size: cover;
+    }
   }
 }
 
@@ -78,14 +82,14 @@ body{
 }
 
 .nav-item{
-  margin: 0 1.5em;
-  border-radius: 5px;
-  white-space: nowrap;
+margin: 0 1.5em;
+border-radius: 5px;
+white-space: nowrap;
 
-.nav-link{
-font-size: 100%;
-letter-spacing: 0.168em;
-}
+  .nav-link{
+  font-size: 100%;
+  letter-spacing: 0.168em;
+  }
 }
 
 .nav-item-hover:hover{
@@ -102,7 +106,8 @@ letter-spacing: 0.168em;
   border-bottom-color: green;
 }
 
-/* SEARCH BAR AND CART*/
+/* SEARCH BAR AND CAR*/
+
 .menu-box{
   margin: 0 50px;
   min-width: 5vw;
@@ -112,41 +117,29 @@ letter-spacing: 0.168em;
   position: absolute;
   float: right;
   right: 0;
+
   
   form{
     height: 1.5vw;
     display: flex;
     align-content: center;
+
   }
 }
 
 .search-box{
   padding: 0.5vw;
   border-radius: 40px;
-  background-color: transparent;
   border-style: solid;
   border-color: transparent;
   border-width: 1px;
   // margin-right: 1vw;
 }
 
-.cart-btn{
-  img{
-  height: 1.5vw;
-  opacity: 0.6;
-  }
-}
-
-
-input:focus{
-  box-shadow: none !important;
-}
-
 .search-input{
   width: 0;
   padding: 0;
   border: none;
-  background: none;
   color:  rgb(112, 112, 112);
   font-size: 0.8vw;
 }
@@ -158,18 +151,37 @@ input:focus{
   justify-content: center;
   align-items: center;
 
+
    img{
     height: 1.5vw;
     opacity: 0.5;
    }
-
 }
+
+.cart-btn{
+  img{
+  height: 1.5vw;
+  opacity: 0.6;
+  }
+}
+
+input:focus{
+  box-shadow: none !important;
+}
+
 
 // CONTEÚDO
 
 .banner{
   height: 37vw;
   padding:0;
+}
+
+.content-title{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4.4vw;
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
 }
 
 .nossa-empresa{
@@ -181,31 +193,49 @@ input:focus{
   letter-spacing: 0.2em;
   background-color:rgba(79, 172, 116, 0.794);
   line-height: 2vw;
+  text-align: justify;
+  padding:0 10vw;
 
   div{
     padding: 1.5vw 1.5vw 4.5vw 1.5vw;
       p{
-        font-size: 1.2vw;
+        font-size: 1.6vw;
       } 
 
-      h1{
+    .content-title{
         font-family: 'Bebas Neue', cursive;
         font-size: 4.4vw;
-                border-bottom: solid 1px white;
-    border-top: solid 1px white;
+        margin: 3vw;
+        border-bottom: solid 1px white;
+        border-top: solid 1px white;
       }
   }
 }
 
-.produtos{
- background-image: url(/img/banner/1.png);
+.texto-2colunas{
+margin: 0 auto;
+column-count:2;
+column-rule:1px dotted white;
+-moz-column-count:2;
+-moz-column-rule:1px dotted white;
+-webkit-column-count:2;
+-webkit-column-rule:1px dotted white;
+-o-column-count:2;
+-o-column-rule:1px dotted white;
+column-gap: 40px;
+}
 
+.produtos{
+  padding: 4%;
+  background-color: yellow;
 }
 
 // FORMULÁRIO DE CONTATO 
 
 .fale-conosco{
   background-color: rgba(255, 238, 0, 0.192);
+  padding: 4%;
+
 
   h1{
     font-family: 'Bebas Neue', cursive;
@@ -271,9 +301,11 @@ input:focus{
 }
 
 @media only screen and (max-width: 992px) {
-.section-background{
-  display: none;
+
+.menu-box, .search-box, .cart-btn{
+  display:none;
 }
+
   .icon{
     height: 20px !important;
     width: 20px !important;
@@ -283,6 +315,11 @@ input:focus{
 
 
   .nossa-empresa{
+    padding: 0;
+
+  .div-text{
+    background-color: rgba(94, 160, 94, 0.253);
+  }
   div{
   padding: 4%;
     p{
@@ -332,11 +369,6 @@ input:focus{
     display: none;
   }
 
-  .navbar-brand {
-    height: 5em;
-    width: 5em;
-    /*background-image: url(/img/logo.png);*/
-  }
   
   .nav-item{
     margin: 0.5em 0 !important;
