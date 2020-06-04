@@ -1,6 +1,7 @@
 @extends('layout.header')
       
       @section('content')
+    
     <div class="inicio" id="inicio"></div>
     <a href="/loja/">
      <img src="/img/banner/4.png" class="banner container-fluid" alt="">
@@ -23,24 +24,7 @@
 
       <section  id="produtos" class="produtos">
         <h1 class="text-center content-title">Produtos</h1>
-  <ul class="list-group list-group-horizontal">
-            <li class="list-group-item">
-                <a class="">Ervas</a>
-            </li>
 
-            <li class="list-group-item">
-              <a class="">Nossa Empresa</a>
-            </li>
-
-            <li class="list-group-item">
-              <a class="">Produtos</a>
-            </li>
-            
-            <li class="list-group-item"">
-              <a class="" >Fale Conosco</a>
-            </li>
-          
-          </ul>
       </section>
 
       <section id="fale-conosco" class="fale-conosco">

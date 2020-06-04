@@ -10943,8 +10943,6 @@ body {
   color: #707070;
 }
 
-/*Card de Compra*/
-
 /*TOP NAVBAR SOCIAL MEDIA*/
 
 .top-navbar {
@@ -10998,24 +10996,24 @@ body {
 /* Navbar */
 
 .navbar-brand {
-  height: 7vw;
-  width: 7vw;
+  height: 8vw;
+  width: 8vw;
   background-image: url(/img/logo.png);
   background-size: cover;
-  margin: 0 5vh;
+  margin: 0 2vw;
 }
 
 .brand-sm {
   display: none;
 }
 
-.nav-item {
-  margin: 0 1.5em;
+.navbar-collapse .nav-item {
+  margin: 0 2em;
   border-radius: 5px;
   white-space: nowrap;
 }
 
-.nav-item .nav-link {
+.navbar-collapse .nav-item .nav-link {
   font-size: 100%;
   letter-spacing: 0.168em;
 }
@@ -11038,7 +11036,6 @@ body {
 
 .menu-box {
   margin: 0 50px;
-  min-width: 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11047,52 +11044,67 @@ body {
   right: 0;
 }
 
-.menu-box form {
-  height: 1.5vw;
-  display: flex;
-  align-content: center;
+.menu-box-sm {
+  display: none;
 }
 
-.search-box {
-  padding: 0.5vw;
-  border-radius: 40px;
-  border-style: solid;
-  border-color: transparent;
-  border-width: 1px;
+.cart-btn img {
+  height: 25px;
 }
 
-.search-input {
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 10px;
+  border: 0.5px solid rgba(170, 170, 170, 0);
+}
+
+.search_input {
+  border: 0;
+  outline: 0;
   width: 0;
-  padding: 0;
-  border: none;
-  color: #707070;
-  font-size: 0.8vw;
+  caret-color: transparent;
+  line-height: 0px;
+  transition: width 0.4s linear;
+  background: none;
 }
 
-.search-btn {
-  outline: none;
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  width: 9vw;
+  caret-color: black;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover {
+  background-color: #f0eeee;
+  border: 0.5px solid #aaaaaa;
+}
+
+.search_icon {
+  height: 20px;
+  width: 20px;
   float: right;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
 }
 
-.search-btn img {
-  height: 1.5vw;
-  opacity: 0.5;
+.search_icon img {
+  height: 20px;
+  width: 20px;
 }
 
-.cart-btn img {
-  height: 1.5vw;
-  opacity: 0.6;
-}
-
-input:focus {
-  box-shadow: none !important;
+.search-sm {
+  display: none;
 }
 
 .banner {
-  height: 37vw;
   padding: 0;
 }
 
@@ -11178,17 +11190,17 @@ input:focus {
 
 @media only screen and (max-width: 1200px) {
   .navbar-brand {
-    height: 120px;
-    width: 120px;
+    height: 9.5vw;
+    width: 9.5vw;
   }
 
-  .nav-item {
-    font-size: 95%;
+  .navbar-collapse .nav-item {
+    margin: 0 0.7em;
   }
 
-  .nav-link {
-    letter-spacing: 0;
-    margin: 0;
+  .navbar-collapse .nav-item .nav-link {
+    font-size: 90%;
+    letter-spacing: 0.168em;
   }
 
   .nossa-empresa {
@@ -11206,11 +11218,48 @@ input:focus {
   }
 }
 
-@media only screen and (max-width: 992px) {
-  .menu-box,
-  .search-box,
-  .cart-btn {
+@media only screen and (max-width: 991px) {
+  .brand-sm {
+    display: block;
+    height: 12vw;
+    width: 12vw;
+    position: relative;
+  }
+
+  .menu-box-desk {
     display: none;
+  }
+
+  .menu-box-sm {
+    display: inline-flex;
+    width: auto;
+    position: relative;
+    margin: 1%;
+  }
+
+  .menu-box-sm .cart-btn {
+    display: flex;
+  }
+
+  .menu-box-sm .cart-btn img {
+    height: 35px;
+    opacity: 0.6;
+  }
+
+  .search-sm {
+    display: flex;
+  }
+
+  .form-control-borderless {
+    border: none;
+  }
+
+  .form-control-borderless:hover,
+  .form-control-borderless:active,
+  .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
   }
 
   .icon {
@@ -11250,19 +11299,22 @@ input:focus {
     display: none;
   }
 
+  .menu-box-sm button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
   .fale-conosco .card-body p {
     font-size: 5%;
   }
 
   .title {
     display: inline;
-  }
-
-  .carousel-item {
-    height: 20em;
-    min-height: 20em;
-    background: no-repeat center center scroll;
-    background-size: cover;
   }
 
   .brand-desk {
@@ -11280,13 +11332,14 @@ input:focus {
   .nav-link:hover {
     color: black !important;
   }
-
-  .nav-search {
-    justify-content: flex-end !important;
-  }
 }
 
 @media only screen and (max-width: 768px) {
+  .brand-sm {
+    height: 16vw;
+    width: 16vw;
+  }
+
   .nossa-empresa div {
     background-image: url(/img/erva2.png);
     background-size: 100% 100%;
@@ -11302,16 +11355,30 @@ input:focus {
     font-size: 8vw;
   }
 
-  .banner {
-    height: 40vw;
-  }
-
   .navbar-bottom {
     display: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .brand-sm {
+    height: 20vw;
+    width: 20vw;
+  }
+
+  .top-navbar .icon {
+    height: 20px !important;
+    width: 20px !important;
+  }
+
+  .top-navbar .idioma-social-span {
+    font-size: 12px !important;
+  }
+
+  .banner {
+    height: 45vw;
+  }
+
   .nossa-empresa div {
     background-image: url(/img/erva2.png);
     background-size: 100% 100%;
@@ -11329,8 +11396,51 @@ input:focus {
     font-size: 8vw;
   }
 
+  .brand-sm {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .brand-sm {
+    height: 22vw;
+    width: 22vw;
+  }
+
+  .top-navbar .icon {
+    height: 18px !important;
+    width: 18px !important;
+    margin-top: 5px;
+  }
+
+  .top-navbar .idioma-social-span {
+    font-size: 11px !important;
+  }
+
+  .brand-sm {
+    height: 5em;
+    width: 5em;
+  }
+
   .banner {
     height: 50vw;
+  }
+
+  .nossa-empresa div {
+    background-image: url(/img/erva2.png);
+    background-size: 100% 100%;
+  }
+
+  .nossa-empresa div p {
+    font-size: 3.5vw;
+    padding: 3%;
+    line-height: 4vw;
+  }
+
+  .nossa-empresa div h1 {
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
+    font-size: 8vw;
   }
 
   .brand-sm {

@@ -1,0 +1,33 @@
+@media only screen and (max-width: 1200px) {
+
+  .navbar-brand {
+    height: 9.5vw;
+    width: 9.5vw;
+  }
+  
+.navbar-collapse .nav-item{
+margin: 0 0.7em; 
+  .nav-link{
+  font-size: 90%;
+  letter-spacing: 0.168em;
+  }
+} 
+
+  .nossa-empresa{
+  letter-spacing: 0.2em;
+  line-height: 2.5vw;
+
+  div{
+      p{
+        font-size: 1.8vw;
+      } 
+
+      h1{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 5vw;
+      }
+  }
+}
+
+
+}

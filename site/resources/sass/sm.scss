@@ -1,0 +1,27 @@
+@media only screen and (max-width: 768px) {
+
+.brand-sm{
+  height: 16vw;
+  width: 16vw;
+}
+
+  .nossa-empresa{
+  div{
+    p{
+    font-size: 3.5vw;
+    padding: 3%;
+    }
+
+    h1{
+    border-bottom: solid 1px white;
+    font-size: 8vw;
+    }
+    background-image: url(/img/erva2.png) ;
+    background-size: 100% 100%;  
+  }    
+}
+  
+  .navbar-bottom{
+  display: none;
+  }
+}

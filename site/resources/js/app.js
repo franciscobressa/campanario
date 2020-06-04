@@ -65,7 +65,7 @@ $(document).click(function(e){
 
 $('.search-btn').hover(function(){
     
-    $('.search-box').css('border-color', 'rgb(0, 158, 0)');
+    $('.search-box').css('border-color', 'gray');
 }, function(){
         if(color){
         $('.search-box').css('border-color', 'transparent')

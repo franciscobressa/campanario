@@ -1,0 +1,121 @@
+@media only screen and (max-width: 991px) {
+
+.brand-sm{
+  display: block;
+  height: 12vw;
+  width: 12vw;
+  position: relative;
+}
+
+.menu-box-desk{
+  display: none;
+}
+
+.menu-box-sm{
+  display: inline-flex;
+  width: auto;
+  position: relative ;
+  margin: 1%;
+.cart-btn{
+  display: flex;
+    img{
+  height: 35px;
+  opacity: 0.6;
+  }
+}
+}
+
+.search-sm{
+  display:flex;
+}
+
+
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+  .icon{
+    height: 20px !important;
+    width: 20px !important;
+    margin: 0 2px;
+  }
+
+  .nossa-empresa{
+    padding: 0;
+
+  .div-text{
+    background-color: rgba(94, 160, 94, 0.253);
+  }
+  div{
+  padding: 4%;
+    p{
+    font-size: 2vw;
+    line-height: 200%;
+    padding: 4%;
+    background-color: rgba(94, 160, 94, 0.253);
+    }
+
+    h1{
+    border-bottom: solid 1px white;
+    font-size: 5vw;
+    background-color: rgba(94, 160, 94, 0.253);
+  
+
+    }
+    background-image: url(/img/erva2.png) ;
+    background-size: cover;  
+  }    
+
+  .navbar-bottom{
+  display: none;
+  }
+}
+
+.menu-box-sm button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.fale-conosco{
+  .card-body{
+    p{
+    font-size: 5%;
+    } 
+    }
+}
+
+
+
+  .title{
+    display: inline;
+  }
+  
+  .brand-desk{
+    display: none;
+  }
+
+  
+  .nav-item{
+    margin: 0.5em 0 !important;
+  }
+  .nav-item:hover{
+    background:none;
+  }
+
+  .nav-link:hover{
+    color:black !important;
+  }
+}

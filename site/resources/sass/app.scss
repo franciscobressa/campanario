@@ -15,12 +15,6 @@ body{
   color: rgb(112, 112, 112);
 }
 
-/*Card de Compra*/ 
-
-.card{
-
-}
-
 /*TOP NAVBAR SOCIAL MEDIA*/
 
 .top-navbar {
@@ -70,22 +64,22 @@ body{
 /* Navbar */
 
 .navbar-brand {
-  height: 7vw;
-  width: 7vw;
+  height: 8vw;
+  width: 8vw;
   background-image: url(/img/logo.png);
   background-size: cover;
-  margin: 0 5vh;
+  margin: 0 2vw;
 }
 
 .brand-sm{
   display: none;
 }
 
-.nav-item{
-margin: 0 1.5em;
+.navbar-collapse .nav-item{
+margin: 0 2em;
 border-radius: 5px;
 white-space: nowrap;
-
+ 
   .nav-link{
   font-size: 100%;
   letter-spacing: 0.168em;
@@ -110,70 +104,81 @@ white-space: nowrap;
 
 .menu-box{
   margin: 0 50px;
-  min-width: 5vw;
   display: flex;
   justify-content: space-between;  
   align-items: center;
   position: absolute;
   float: right;
   right: 0;
+}
+
+.menu-box-sm{
+  display: none;
+  
+}
 
   
-  form{
-    height: 1.5vw;
-    display: flex;
-    align-content: center;
-
-  }
-}
-
-.search-box{
-  padding: 0.5vw;
-  border-radius: 40px;
-  border-style: solid;
-  border-color: transparent;
-  border-width: 1px;
-  // margin-right: 1vw;
-}
-
-.search-input{
-  width: 0;
-  padding: 0;
-  border: none;
-  color:  rgb(112, 112, 112);
-  font-size: 0.8vw;
-}
-
-.search-btn{
-  outline: none;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-   img{
-    height: 1.5vw;
-    opacity: 0.5;
-   }
-}
-
 .cart-btn{
   img{
-  height: 1.5vw;
-  opacity: 0.6;
+  height: 25px;
   }
 }
 
-input:focus{
-  box-shadow: none !important;
+.searchbar{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 10px;
+  border: 0.5px solid rgba(170, 170, 170, 0);
+
 }
 
+    .search_input{
+    border: 0;
+    outline: 0;
+    width: 0;
+    caret-color:transparent;
+    line-height: 0px;
+    transition: width 0.4s linear;
+    background:none;
+    }
 
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 9vw;
+    caret-color:black;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover{
+    background-color: rgb(240, 238, 238);
+    border: 0.5px solid rgb(170, 170, 170);
+    }
+
+    .search_icon{
+    height: 20px;
+    width: 20px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration:none;
+    }
+
+    .search_icon img{
+    height: 20px;
+    width: 20px;
+    }
+
+.search-sm{
+  display:none;
+}
 // CONTEÚDO
 
 .banner{
-  height: 37vw;
   padding:0;
 }
 
@@ -263,179 +268,7 @@ column-gap: 40px;
   background-size: 100% 100%;  
 }
 
-
-
-@media only screen and (max-width: 1200px) {
-
-  .navbar-brand {
-    height: 120px;
-    width: 120px;
-  }
-  
-  .nav-item{
-    font-size: 95%;
-  }
-
-  .nav-link{
-    letter-spacing: 0;
-    margin: 0;
-  }
-
-  .nossa-empresa{
-  letter-spacing: 0.2em;
-  line-height: 2.5vw;
-
-  div{
-      p{
-        font-size: 1.8vw;
-      } 
-
-      h1{
-        font-family: 'Bebas Neue', cursive;
-        font-size: 5vw;
-      }
-  }
-}
-
-
-}
-
-@media only screen and (max-width: 992px) {
-
-.menu-box, .search-box, .cart-btn{
-  display:none;
-}
-
-  .icon{
-    height: 20px !important;
-    width: 20px !important;
-    margin: 0 2px;
-  }
-
-
-
-  .nossa-empresa{
-    padding: 0;
-
-  .div-text{
-    background-color: rgba(94, 160, 94, 0.253);
-  }
-  div{
-  padding: 4%;
-    p{
-    font-size: 2vw;
-    line-height: 200%;
-    padding: 4%;
-    background-color: rgba(94, 160, 94, 0.253);
-    }
-
-    h1{
-    border-bottom: solid 1px white;
-    font-size: 5vw;
-    background-color: rgba(94, 160, 94, 0.253);
-  
-
-    }
-    background-image: url(/img/erva2.png) ;
-    background-size: cover;  
-  }    
-
-  .navbar-bottom{
-  display: none;
-  }
-}
-
-.fale-conosco{
-  .card-body{
-    p{
-    font-size: 5%;
-    } 
-    }
-}
-
-
-
-  .title{
-    display: inline;
-  }
-  .carousel-item {
-    height: 20em;
-    min-height: 20em;
-    background: no-repeat center center scroll;
-    background-size: cover;
-  }
-  
-  .brand-desk{
-    display: none;
-  }
-
-  
-  .nav-item{
-    margin: 0.5em 0 !important;
-  }
-  .nav-item:hover{
-    background:none;
-  }
-
-  .nav-link:hover{
-    color:black !important;
-  }
-
-  .nav-search{
-    justify-content: flex-end !important;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .nossa-empresa{
-  div{
-    p{
-    font-size: 3.5vw;
-    padding: 3%;
-    }
-
-    h1{
-    border-bottom: solid 1px white;
-    font-size: 8vw;
-    }
-    background-image: url(/img/erva2.png) ;
-    background-size: 100% 100%;  
-  }    
-}
-    .banner{
-    height: 40vw;
-  }
-  
-  .navbar-bottom{
-  display: none;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .nossa-empresa{
-  div{
-    p{
-    font-size: 3.5vw;
-    padding: 3%;
-    line-height: 4vw;
-
-    }
-
-    h1{
-    border-bottom: solid 1px white;
-    border-top: solid 1px white;
-
-    font-size: 8vw;
-    }
-    background-image: url(/img/erva2.png) ;
-    background-size: 100% 100%;  
-  }    
-}
-  .banner{
-  height: 50vw;
-}
-
-.brand-sm{
-display: inline;}
-}
-
+@import 'lg';
+@import 'md';
+@import 'sm';
+@import 'xs';
