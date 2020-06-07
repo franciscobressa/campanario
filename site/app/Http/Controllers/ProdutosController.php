@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Produto;
+use App\Categoria;
 
 class ProdutosController extends Controller
 {
@@ -15,9 +16,9 @@ class ProdutosController extends Controller
     public function index()
     {
         $produtos = Produto::all();
-        $categorias = ['Ervas','Cuias','Bombas','Guampas'];
+        $categorias = Categoria::all();
 
-        return view('pages.admin.produtos', ['produtos'=>$produtos], ['categorias'=>$categorias]);
+        return view('pages.admin.produtos', ['produtos'=>$produtos], ['categorias' => $categorias]);
     }
 
     /**

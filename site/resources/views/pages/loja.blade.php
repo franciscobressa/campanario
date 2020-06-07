@@ -12,7 +12,7 @@
                     <h1 class="my-4">Categorias</h1>
                     @foreach ($categorias as $categoria)
                         <div class="list-group">
-                            <a href="#" class="list-group-item">{{$categoria}}</a>
+                            <a href="#" class="list-group-item">{{$categoria->nome}}</a>
                         </div>
                     @endforeach
                 @endif 

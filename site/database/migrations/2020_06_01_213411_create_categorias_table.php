@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Categoria;
 
 class CreateCategoriasTable extends Migration
 {
@@ -18,6 +19,13 @@ class CreateCategoriasTable extends Migration
             $table->string('nome');
             $table->timestamps();
         });
+
+        // Create four categories to the products
+        Categoria::create(['nome' => 'Ervas']);
+        Categoria::create(['nome' => 'Cuias']);
+        Categoria::create(['nome' => 'Bombas']);
+        Categoria::create(['nome' => 'Guampas']);
+
     }
 
     /**

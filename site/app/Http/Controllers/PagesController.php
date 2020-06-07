@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Produto;
+use App\Categoria;
 
 class PagesController extends Controller
 {
@@ -21,7 +22,7 @@ class PagesController extends Controller
 
     public function loja(){
         $produtos = Produto::all();
-        $categorias = ['Ervas','Cuias','Bombas','Guampas'];
+        $categorias = Categoria::all();
 
         return view('pages.loja', ['produtos' => $produtos], ['categorias' => $categorias]);
     }

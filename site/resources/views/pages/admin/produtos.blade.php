@@ -12,7 +12,7 @@
             <h1 class="my-4">Categorias</h1>
             @foreach ($categorias as $categoria)
                 <div class="list-group">
-                    <a href="#" class="list-group-item">{{$categoria}}</a>
+                    <a href="#" class="list-group-item">{{$categoria->nome}}</a>
                 </div>
             @endforeach
         @endif 
@@ -37,7 +37,7 @@
                   <h4 class="card-title">
                     <a href="#">{{$produto->nome}}</a>
                   </h4>
-                  <h5>R${{$produto->preco}}</h5>
+                  <h5>R$ {{$produto->preco}}</h5>
                   <p class="card-text">{{$produto->descricao}}</p>
                 </div>
               </div>
