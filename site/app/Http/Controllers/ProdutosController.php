@@ -17,7 +17,7 @@ class ProdutosController extends Controller
         $produtos = Produto::all();
         $categorias = ['Ervas','Cuias','Bombas','Guampas'];
 
-        return view('pages.loja', ['produtos'=>$produtos], ['categorias'=>$categorias]);
+        return view('pages.admin.produtos', ['produtos'=>$produtos], ['categorias'=>$categorias]);
     }
 
     /**
@@ -27,7 +27,7 @@ class ProdutosController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.create');
     }
 
     /**
@@ -38,7 +38,35 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nome' => 'required',
+            'preco' => 'required',
+            'descricao' => 'required',
+            'foto' => 'required|image|max:1999',
+            'categoria' => 'required'
+        ]);
+
+        // Handling image name
+        $fileNameExt = $request->file('foto')->getClientOriginalName();
+        $fileName = pathinfo($fileNameExt, PATHINFO_FILENAME);
+        $ext = $request->file('foto')->getClientOriginalExtension();
+        
+        $finalFileName = $fileName.'_'.time().'.'.$ext;
+
+        // Upload image
+        $path = $request->file('foto')->storeAs('public/produtos', $finalFileName);
+
+
+        // Saving product
+        $produto = new Produto;
+        $produto->nome = $request->input('nome');
+        $produto->preco = $request->input('preco');
+        $produto->descricao = $request->input('descricao');
+        $produto->foto = $finalFileName;
+        $produto->id_categoria = $request->input('categoria');
+        $produto->save();
+
+        return redirect('/admin/produtos')->with('success', 'Item Adicionado');
     }
 
     /**
