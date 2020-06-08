@@ -7,6 +7,7 @@
     <title>{{config('app.name')}}</title>
     <link rel="icon" href="{{ URL::asset('img/favicon.png') }}" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet"> 
 
 </head>
 <body>
@@ -55,13 +56,15 @@
 
 </nav>
 
-<nav class="navbar navbar-expand-lg  navbar-light"  >
+<nav class="navbar navbar-middle navbar-expand-lg  navbar-light"  >
   <div class="container-fluid justify-content-between">
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
     </button>
+  <a href="/">
     <div class="navbar-brand brand-sm mx-auto" href="#">
     </div>
+  </a>
 <div class="menu-box-sm">
             <button data-toggle="collapse" type="button" data-target="#" class="cart-btn">
             <img src="/img/icon/cart.png">
@@ -79,8 +82,10 @@
               <a class="nav-link link-interno" href="#nossa-empresa">Nossa Empresa</a>
             </li>
             <li class="nav-item my-auto brand-desk ">
+            <a href="/">
               <div class="navbar-brand" href="#">
-              </div>           
+              </div>  
+            </a>         
             </li>
             <li class="nav-item nav-item-hover my-auto ">
               <a class="nav-link link-interno" href="#produtos">Produtos</a>
@@ -113,8 +118,6 @@
  
         
       </nav>
-
-      <nav class="navbar navbar-bottom"></nav>
     </header>
 
 

@@ -4,6 +4,12 @@
   height: 20vw;
   width: 20vw;
 }
+
+.subtext{
+  line-height: 1em;
+  font-size: 3vw;
+}
+
 .top-navbar {
 
   .icon {
@@ -16,9 +22,20 @@
   }
 }
 
+.content-title{
+  font-size: 7vw;
+}
+
+.content-subtitle{
+  font-size: 5.1vw;
+}
 
 .banner{
   height:45vw;
+}
+
+.content-title{
+  font-size: 18w;
 }
 
 .nossa-empresa{
@@ -28,20 +45,10 @@
     padding: 3%;
     line-height: 4vw;
     }
-
-    h1{
-    border-bottom: solid 1px white;
-    border-top: solid 1px white;
-
-    font-size: 8vw;
-    }
-    background-image: url(/img/erva2.png) ;
-    background-size: 100% 100%;  
   }    
 }
 
-.brand-sm{
-display: inline;}
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -50,6 +57,12 @@ display: inline;}
   height: 22vw;
   width: 22vw;
 }
+
+.subtext{
+  line-height: 1em;
+  font-size: 3.2vw;
+}
+
 
 .top-navbar {
   .icon {
@@ -63,6 +76,14 @@ display: inline;}
   }
 }
 
+.content-title{
+  font-size: 7.2vw;
+}
+
+.content-subtitle{
+  font-size: 5.3vw;
+}
+
 .brand-sm{
   height: 5em;
   width: 5em;
@@ -72,26 +93,18 @@ display: inline;}
   height:50vw;
 }
 
+.content-title{
+  font-size: 18w;
+}
+
+
   .nossa-empresa{
   div{
     p{
     font-size: 3.5vw;
     padding: 3%;
     line-height: 4vw;
-
     }
-
-    h1{
-    border-bottom: solid 1px white;
-    border-top: solid 1px white;
-
-    font-size: 8vw;
-    }
-    background-image: url(/img/erva2.png) ;
-    background-size: 100% 100%;  
   }    
 }
-
-.brand-sm{
-display: inline;}
 }

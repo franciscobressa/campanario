@@ -10936,11 +10936,17 @@ a.text-dark:focus {
 body {
   margin: 0px;
   box-sizing: border-box;
+  background-image: url(/img/banner/background.png);
 }
 
 .navbar {
   box-shadow: inset 0 0 70px 0 lightgrey !important;
   color: #707070;
+}
+
+.navbar-middle {
+  border-bottom-style: solid;
+  border-bottom-color: green;
 }
 
 /*TOP NAVBAR SOCIAL MEDIA*/
@@ -11027,11 +11033,6 @@ body {
   color: white !important;
 }
 
-.navbar-bottom {
-  border-bottom-style: solid;
-  border-bottom-color: green;
-}
-
 /* SEARCH BAR AND CAR*/
 
 .menu-box {
@@ -11109,10 +11110,13 @@ body {
 }
 
 .content-title {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Merienda", cursive;
   font-size: 4.4vw;
-  border-bottom: solid 1px white;
-  border-top: solid 1px white;
+  margin: 3vw;
+}
+
+.content-subtitle {
+  font-size: 2.5vw;
 }
 
 .nossa-empresa {
@@ -11120,9 +11124,8 @@ body {
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  color: white !important;
+  color: #085032;
   letter-spacing: 0.2em;
-  background-color: rgba(79, 172, 116, 0.794);
   line-height: 2vw;
   text-align: justify;
   padding: 0 10vw;
@@ -11137,55 +11140,110 @@ body {
 }
 
 .nossa-empresa div .content-title {
-  font-family: "Bebas Neue", cursive;
-  font-size: 4.4vw;
-  margin: 3vw;
-  border-bottom: solid 1px white;
-  border-top: solid 1px white;
+  border-bottom: solid 1px #085032;
+  border-top: solid 1px #085032;
 }
 
-.texto-2colunas {
+.nossa-empresa .texto-2colunas {
   margin: 0 auto;
   column-count: 2;
-  column-rule: 1px dotted white;
+  column-rule: 2px dotted #085032;
   -moz-column-count: 2;
-  -moz-column-rule: 1px dotted white;
+  -moz-column-rule: 2px dotted #085032;
   -webkit-column-count: 2;
-  -webkit-column-rule: 1px dotted white;
+  -webkit-column-rule: 2px dotted #085032;
   -o-column-count: 2;
-  -o-column-rule: 1px dotted white;
+  -o-column-rule: 2px dotted #085032;
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
 
+.subtext {
+  color: white;
+  letter-spacing: 0.2em;
+  line-height: 2vw;
+  font-size: 1.6vw;
+  text-align: justify;
+}
+
+.subtext-erro {
+  letter-spacing: 1px;
+  font-size: 1.2vw;
+}
+
+.fale-conosco .subtext {
+  color: #085032;
+}
+
+.section-foto {
+  padding: 0 10vw;
+  justify-content: space-between;
+}
+
+.section-foto h2 {
+  color: #085032;
+  font-family: "Merienda", cursive;
+  margin-bottom: 1.5em;
+}
+
+.section-foto .galeria {
+  width: 100%;
+}
+
+.section-foto .galeria .foto-galeria {
+  width: auto;
+  height: auto;
+}
+
+.section-foto .galeria .foto-galeria img {
+  height: 16vw;
+}
+
+.local {
+  margin-bottom: 5vw;
+  padding: 0 10vw;
+}
+
+.local h2 {
+  color: #085032;
+  font-family: "Merienda", cursive;
+  margin-bottom: 1.5em;
+}
+
+.local iframe {
+  height: 50vw;
+}
+
+.fabrica {
+  margin: 5vw 0;
+}
+
 .produtos {
-  padding: 4%;
-  background-color: yellow;
+  padding: 1em 10vw;
+  color: white;
+  border-bottom: 1px solid #085032;
+  background-color: #085032;
+  margin-top: 2em;
+}
+
+.produtos .content-title {
+  border-bottom: solid 1px white;
+  border-top: solid 1px white;
 }
 
 .fale-conosco {
-  background-color: rgba(255, 238, 0, 0.192);
-  padding: 4%;
+  padding: 1.5em 10vw;
+  color: #085032;
+  border-bottom: 1px solid #085032;
 }
 
-.fale-conosco h1 {
-  font-family: "Bebas Neue", cursive;
-  font-size: 5vw;
-  color: #ee9632;
+.fale-conosco .content-title {
+  border-bottom: solid 1px #085032;
+  border-top: solid 1px #085032;
 }
 
 .fale-conosco .card-body p {
   font-size: 1.2vw;
-}
-
-.fale-conosco .card-header,
-.fale-conosco .btn {
-  background-color: rgba(238, 150, 50, 0.74);
-}
-
-.section-background {
-  background-image: url(/img/erva.png);
-  background-size: 100% 100%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -11203,6 +11261,14 @@ body {
     letter-spacing: 0.168em;
   }
 
+  .content-title {
+    font-size: 5vw;
+  }
+
+  .content-subtitle {
+    font-size: 3.1vw;
+  }
+
   .nossa-empresa {
     letter-spacing: 0.2em;
     line-height: 2.5vw;
@@ -11212,9 +11278,20 @@ body {
     font-size: 1.8vw;
   }
 
-  .nossa-empresa div h1 {
-    font-family: "Bebas Neue", cursive;
-    font-size: 5vw;
+  .subtext {
+    line-height: 1.5em;
+    font-size: 2.2vw;
+  }
+
+  .section-foto .galeria .foto-galeria img {
+    height: 33vw;
+    margin: 0.5em auto !important;
+  }
+
+  .section-foto h2 {
+    color: #085032;
+    font-family: "Merienda", cursive;
+    margin-bottom: 1.5em;
   }
 }
 
@@ -11224,6 +11301,10 @@ body {
     height: 12vw;
     width: 12vw;
     position: relative;
+  }
+
+  .navbar-middle {
+    border: none;
   }
 
   .menu-box-desk {
@@ -11250,6 +11331,11 @@ body {
     display: flex;
   }
 
+  .subtext {
+    line-height: 1.5em;
+    font-size: 2.5vw;
+  }
+
   .form-control-borderless {
     border: none;
   }
@@ -11268,34 +11354,35 @@ body {
     margin: 0 2px;
   }
 
+  .content-title {
+    font-size: 5.2vw;
+  }
+
+  .content-subtitle {
+    font-size: 3.3vw;
+  }
+
   .nossa-empresa {
     padding: 0;
   }
 
-  .nossa-empresa .div-text {
-    background-color: rgba(94, 160, 94, 0.253);
+  .nossa-empresa .texto-2colunas {
+    margin: 0 auto;
+    -moz-column-count: 1;
+         column-count: 1;
   }
 
   .nossa-empresa div {
     padding: 4%;
-    background-image: url(/img/erva2.png);
-    background-size: cover;
   }
 
   .nossa-empresa div p {
     font-size: 2vw;
     line-height: 200%;
     padding: 4%;
-    background-color: rgba(94, 160, 94, 0.253);
   }
 
-  .nossa-empresa div h1 {
-    border-bottom: solid 1px white;
-    font-size: 5vw;
-    background-color: rgba(94, 160, 94, 0.253);
-  }
-
-  .nossa-empresa .navbar-bottom {
+  .navbar-bottom {
     display: none;
   }
 
@@ -11340,6 +11427,23 @@ body {
     width: 16vw;
   }
 
+  .foto-galeria {
+    margin: 0 3em;
+  }
+
+  .content-title {
+    font-size: 6vw;
+  }
+
+  .content-subtitle {
+    font-size: 4.1vw;
+  }
+
+  .subtext {
+    line-height: 1.5em;
+    font-size: 2.8vw;
+  }
+
   .nossa-empresa div {
     background-image: url(/img/erva2.png);
     background-size: 100% 100%;
@@ -11352,7 +11456,6 @@ body {
 
   .nossa-empresa div h1 {
     border-bottom: solid 1px white;
-    font-size: 8vw;
   }
 
   .navbar-bottom {
@@ -11366,6 +11469,11 @@ body {
     width: 20vw;
   }
 
+  .subtext {
+    line-height: 1em;
+    font-size: 3vw;
+  }
+
   .top-navbar .icon {
     height: 20px !important;
     width: 20px !important;
@@ -11375,13 +11483,20 @@ body {
     font-size: 12px !important;
   }
 
+  .content-title {
+    font-size: 7vw;
+  }
+
+  .content-subtitle {
+    font-size: 5.1vw;
+  }
+
   .banner {
     height: 45vw;
   }
 
-  .nossa-empresa div {
-    background-image: url(/img/erva2.png);
-    background-size: 100% 100%;
+  .content-title {
+    font-size: 18w;
   }
 
   .nossa-empresa div p {
@@ -11389,22 +11504,17 @@ body {
     padding: 3%;
     line-height: 4vw;
   }
-
-  .nossa-empresa div h1 {
-    border-bottom: solid 1px white;
-    border-top: solid 1px white;
-    font-size: 8vw;
-  }
-
-  .brand-sm {
-    display: inline;
-  }
 }
 
 @media only screen and (max-width: 400px) {
   .brand-sm {
     height: 22vw;
     width: 22vw;
+  }
+
+  .subtext {
+    line-height: 1em;
+    font-size: 3.2vw;
   }
 
   .top-navbar .icon {
@@ -11417,6 +11527,14 @@ body {
     font-size: 11px !important;
   }
 
+  .content-title {
+    font-size: 7.2vw;
+  }
+
+  .content-subtitle {
+    font-size: 5.3vw;
+  }
+
   .brand-sm {
     height: 5em;
     width: 5em;
@@ -11426,25 +11544,14 @@ body {
     height: 50vw;
   }
 
-  .nossa-empresa div {
-    background-image: url(/img/erva2.png);
-    background-size: 100% 100%;
+  .content-title {
+    font-size: 18w;
   }
 
   .nossa-empresa div p {
     font-size: 3.5vw;
     padding: 3%;
     line-height: 4vw;
-  }
-
-  .nossa-empresa div h1 {
-    border-bottom: solid 1px white;
-    border-top: solid 1px white;
-    font-size: 8vw;
-  }
-
-  .brand-sm {
-    display: inline;
   }
 }
 

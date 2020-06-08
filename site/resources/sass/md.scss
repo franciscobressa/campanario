@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.navbar-middle{
+  border:none;
+}
+
 .menu-box-desk{
   display: none;
 }
@@ -29,6 +33,10 @@
   display:flex;
 }
 
+.subtext{
+  line-height: 1.5em;
+  font-size: 2.5vw;
+}
 
 
 .form-control-borderless {
@@ -48,35 +56,32 @@
     margin: 0 2px;
   }
 
-  .nossa-empresa{
-    padding: 0;
+.content-title{
+  font-size: 5.2vw;
+}
 
-  .div-text{
-    background-color: rgba(94, 160, 94, 0.253);
-  }
+.content-subtitle{
+  font-size: 3.3vw;
+}
+.nossa-empresa{
+    padding: 0;
+        .texto-2colunas{
+      margin: 0 auto;
+      column-count:1;
+    }
+
   div{
   padding: 4%;
     p{
     font-size: 2vw;
     line-height: 200%;
     padding: 4%;
-    background-color: rgba(94, 160, 94, 0.253);
     }
+  }     
+}
 
-    h1{
-    border-bottom: solid 1px white;
-    font-size: 5vw;
-    background-color: rgba(94, 160, 94, 0.253);
-  
-
-    }
-    background-image: url(/img/erva2.png) ;
-    background-size: cover;  
-  }    
-
-  .navbar-bottom{
-  display: none;
-  }
+.navbar-bottom{
+display: none;
 }
 
 .menu-box-sm button {
@@ -96,7 +101,6 @@
     } 
     }
 }
-
 
 
   .title{
