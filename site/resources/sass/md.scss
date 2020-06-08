@@ -1,0 +1,125 @@
+@media only screen and (max-width: 991px) {
+
+.brand-sm{
+  display: block;
+  height: 12vw;
+  width: 12vw;
+  position: relative;
+}
+
+.navbar-middle{
+  border:none;
+}
+
+.menu-box-desk{
+  display: none;
+}
+
+.menu-box-sm{
+  display: inline-flex;
+  width: auto;
+  position: relative ;
+  margin: 1%;
+.cart-btn{
+  display: flex;
+    img{
+  height: 35px;
+  opacity: 0.6;
+  }
+}
+}
+
+.search-sm{
+  display:flex;
+}
+
+.subtext{
+  line-height: 1.5em;
+  font-size: 2.5vw;
+}
+
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+  .icon{
+    height: 20px !important;
+    width: 20px !important;
+    margin: 0 2px;
+  }
+
+.content-title{
+  font-size: 5.2vw;
+}
+
+.content-subtitle{
+  font-size: 3.3vw;
+}
+.nossa-empresa{
+    padding: 0;
+        .texto-2colunas{
+      margin: 0 auto;
+      column-count:1;
+    }
+
+  div{
+  padding: 4%;
+    p{
+    font-size: 2vw;
+    line-height: 200%;
+    padding: 4%;
+    }
+  }     
+}
+
+.navbar-bottom{
+display: none;
+}
+
+.menu-box-sm button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.fale-conosco{
+  .card-body{
+    p{
+    font-size: 5%;
+    } 
+    }
+}
+
+
+  .title{
+    display: inline;
+  }
+  
+  .brand-desk{
+    display: none;
+  }
+
+  
+  .nav-item{
+    margin: 0.5em 0 !important;
+  }
+  .nav-item:hover{
+    background:none;
+  }
+
+  .nav-link:hover{
+    color:black !important;
+  }
+}

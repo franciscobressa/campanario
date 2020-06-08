@@ -1,0 +1,57 @@
+@media only screen and (max-width: 1200px) {
+
+.navbar-brand {
+  height: 9.5vw;
+  width: 9.5vw;
+}
+  
+.navbar-collapse .nav-item{
+  margin: 0 0.7em; 
+    .nav-link{
+      font-size: 90%;
+      letter-spacing: 0.168em;
+    }
+} 
+
+.content-title{
+  font-size: 5vw;
+}
+.content-subtitle{
+  font-size: 3.1vw;
+}
+
+.nossa-empresa{
+  letter-spacing: 0.2em;
+  line-height: 2.5vw;
+
+  div{
+      p{
+        font-size: 1.8vw;
+      } 
+  }
+}
+
+.subtext{
+  line-height: 1.5em;
+  font-size: 2.2vw;
+}
+
+.section-foto{
+  .galeria{
+
+    .foto-galeria {
+        img{
+          height:33vw;
+          margin: 0.5em auto !important;
+        }
+    }
+  }
+
+h2{
+  color:rgb(8, 80, 50) ;
+  font-family: 'Merienda', cursive; 
+  margin-bottom: 1.5em;
+  }
+}
+
+}

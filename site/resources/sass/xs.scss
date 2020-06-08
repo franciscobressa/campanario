@@ -1,0 +1,110 @@
+@media only screen and (max-width: 600px) {
+
+.brand-sm{
+  height: 20vw;
+  width: 20vw;
+}
+
+.subtext{
+  line-height: 1em;
+  font-size: 3vw;
+}
+
+.top-navbar {
+
+  .icon {
+    height: 20px !important;
+    width: 20px !important;
+  }
+
+  .idioma-social-span{
+    font-size: 12px !important;
+  }
+}
+
+.content-title{
+  font-size: 7vw;
+}
+
+.content-subtitle{
+  font-size: 5.1vw;
+}
+
+.banner{
+  height:45vw;
+}
+
+.content-title{
+  font-size: 18w;
+}
+
+.nossa-empresa{
+  div{
+    p{
+    font-size: 3.5vw;
+    padding: 3%;
+    line-height: 4vw;
+    }
+  }    
+}
+
+
+}
+
+@media only screen and (max-width: 400px) {
+
+.brand-sm{
+  height: 22vw;
+  width: 22vw;
+}
+
+.subtext{
+  line-height: 1em;
+  font-size: 3.2vw;
+}
+
+
+.top-navbar {
+  .icon {
+    height: 18px !important;
+    width: 18px !important;
+    margin-top: 5px;
+  }
+
+  .idioma-social-span{
+    font-size: 11px !important;
+  }
+}
+
+.content-title{
+  font-size: 7.2vw;
+}
+
+.content-subtitle{
+  font-size: 5.3vw;
+}
+
+.brand-sm{
+  height: 5em;
+  width: 5em;
+}
+
+.banner{
+  height:50vw;
+}
+
+.content-title{
+  font-size: 18w;
+}
+
+
+  .nossa-empresa{
+  div{
+    p{
+    font-size: 3.5vw;
+    padding: 3%;
+    line-height: 4vw;
+    }
+  }    
+}
+}
