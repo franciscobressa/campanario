@@ -150,9 +150,6 @@
       <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
 
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
         <ul class="list-unstyled">
           <li>
             <a href="#!">Link 1</a>
