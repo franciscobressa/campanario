@@ -28,7 +28,9 @@ class ProdutosController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.create');
+        $categorias = Categoria::all();
+
+        return view('pages.admin.create')->with('categorias', $categorias);
     }
 
     /**
@@ -67,7 +69,7 @@ class ProdutosController extends Controller
         $produto->id_categoria = $request->input('categoria');
         $produto->save();
 
-        return redirect('/admin/produtos')->with('success', 'Item Adicionado');
+        return redirect('/admin/produtos')->with('success', 'Item adicionado com sucesso!');
     }
 
     /**

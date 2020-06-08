@@ -18,24 +18,22 @@
         @endif 
 
       </div>
-      <!-- /.col-lg-3 -->
+      <!-- /.col-lg-2 -->
 
-      <div class="col-lg-10">
+      <div class="col-lg-10 pt-4">
+        @include('layout.alerts')
 
         <a role="button" class="btn btn-success text-white" href="/admin/produtos/create">Adicionar Produto</a>
         <div class="row mt-4">
-        
-        {{-- @for ($i = 0; $i < 18; $i++) --}}
-            
+          
         @if (count($produtos) > 0)
             @foreach ($produtos as $produto)
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card h-100">
-                {{-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> --}}
-                <a href="#"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
+                <a href="/admin/produtos/{{$produto->id}}"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}"></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">{{$produto->nome}}</a>
+                    <a href="/admin/produtos/{{$produto->id}}">{{$produto->nome}}</a>
                   </h4>
                   <h5>R$ {{$produto->preco}}</h5>
                   <p class="card-text">{{$produto->descricao}}</p>
@@ -44,20 +42,20 @@
             </div>
             @endforeach
         @else
+        <div class="col-lg-3 col-md-6 mb-4">
             <h2>Não há produtos!</h2>
-        @endif
-            
-        {{-- @endfor --}}
-
         </div>
+        @endif
+
+      </div>
         <!-- /.row -->
 
       </div>
-      <!-- /.col-lg-9 -->
+      <!-- /.col-lg-10 -->
 
     </div>
     <!-- /.row -->
 
   </div>
-    
+  {{-- container-fluid --}}
 @endsection

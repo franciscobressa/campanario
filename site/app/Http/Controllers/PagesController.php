@@ -9,7 +9,9 @@ use App\Categoria;
 class PagesController extends Controller
 {
     public function index(){
-        return view('index');
+        $produtos = Produto::all();
+
+        return view('index')->with('produtos', $produtos);
     }
 
     public function admin(){

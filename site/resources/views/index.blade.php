@@ -39,11 +39,10 @@
 </div>
 
     <div class="section-foto justify-content-center" >
-    <center>
-        <h2 class="content-subtitle" style="  color:rgb(8, 80, 50) ;
+    
+        <h2 class="content-subtitle text-center" style="  color:rgb(8, 80, 50) ;
   font-family: 'Merienda', cursive; 
   margin-bottom: 1.5em;">Mais gostosa impossível!</h2>
-    </center>
         <div class="row bg galeria m-0 p-0 justify-content-between">
             <div class="foto-galeria m-0 p-0 col-xl-3 col-md-6">
                 <img src="/img/galeria/galeria1.png" class="m-0 p-0" alt="">
@@ -64,29 +63,26 @@
       <section  id="produtos" class="produtos">
         <h1 class="text-center content-title">Produtos</h1>
             <p class="subtext text-center">Conheça nossos produtos e aproveite o verdadeiro sabor da erva mate :)</p>
- @for ($i = 0; $i < 1; $i++)
-                    
-                @if (count($errors) > 0)
-                    @foreach ($errors as $produto)
-                    <div class="col-lg-3 col-md-6 mb-4">
-                      <div class="card h-100">
-                        {{-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> --}}
-                        <a href="#"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">{{$produto->nome}}</a>
-                          </h4>
-                          <h5>R${{$produto->preco}}</h5>
-                          <p class="card-text">{{$produto->descricao}}</p>
-                        </div>
-                      </div>
-                    </div>
-                    @endforeach
-                @else
-                    <h3 class="text-center subtext-erro">Você ainda não possui nenhum produto cadastrado :(</h3>
-                @endif
-                    
-                @endfor
+            <div class="row mt-4">     
+            @if (count($produtos) > 0)
+            @foreach ($produtos as $produto)
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">{{$produto->nome}}</a>
+                  </h4>
+                  <h5>R${{$produto->preco}}</h5>
+                  <p class="card-text">{{$produto->descricao}}</p>
+                </div>
+              </div>
+            </div>
+            @endforeach
+            @else
+              <h3 class="text-center subtext-erro">Você ainda não possui nenhum produto cadastrado :(</h3>
+            @endif
+          </div>
       </section>
 
       <section id="fale-conosco" class="fale-conosco">
