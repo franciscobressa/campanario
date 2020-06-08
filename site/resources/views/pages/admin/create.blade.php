@@ -20,7 +20,13 @@
         </div>
         <div class="form-group">
             {!! Form::label('Categoria:') !!}
-            {!! Form::select('categoria', ['1' => 'Ervas', '2' => 'Cuias', '3' => 'Bombas', '4' => 'Guampas'], null, ['placeholder' => 'Categoria...']) !!}
+            <select name="categoria" placeholder="Categorias">
+                <option value="" disabled selected hidden>Categoria...</option>
+                @foreach ($categorias as $categoria)
+                    <option value="{{$categoria->id}}">{{$categoria->nome}}</option>
+                @endforeach
+            </select>
+            {{-- {!! Form::select('categoria', ['1' => 'Ervas', '2' => 'Cuias', '3' => 'Bombas', '4' => 'Guampas'], null, ['placeholder' => 'Categoria...']) !!} --}}
         </div>
         <div class="form-group">
             {!! Form::label('foto', 'Foto:') !!}
