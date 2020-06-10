@@ -24,14 +24,12 @@
      </div>
 
 <div class="local">
-    <center>
-        <h2 class="content-subtitle">Onde você pode nos encontrar</h2>
-    </center>
-    <div class="container p-0 m-0">
+        <h2 class="content-subtitle text-center">Onde você pode nos encontrar</h2>
+    <div class="container p-0 m-0 mx-auto">
         <div class="row m-0 p-0">
-            <div class="col p-0 m-0">
-                <div class="card-body p-0 m-0">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.112546335258!2d-54.235645585491206!3d-23.056335084935913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948b8f17815d3b79%3A0x6d67d7794c711a33!2sErva%20Mate%20Campan%C3%A1rio!5e0!3m2!1spt-BR!2sbr!4v1591345743163!5m2!1spt-BR!2sbr" class="col-12 p-0 m-0" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="col p-0 m-0 ">
+                <div class="card-body p-0 m-0 mx-auto">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.112546335258!2d-54.235645585491206!3d-23.056335084935913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948b8f17815d3b79%3A0x6d67d7794c711a33!2sErva%20Mate%20Campan%C3%A1rio!5e0!3m2!1spt-BR!2sbr!4v1591345743163!5m2!1spt-BR!2sbr" class="col-12 p-0 m-0 mx-auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
@@ -62,19 +60,18 @@
 
       <section  id="produtos" class="produtos">
         <h1 class="text-center content-title">Produtos</h1>
-            <p class="subtext text-center">Conheça nossos produtos e aproveite o verdadeiro sabor da erva mate :)</p>
-            <div class="row mt-4">     
+            <p class="subtext text-center">Conheça nossos produtos e aproveite o verdadeiro sabor da erva mate :)<br>Você também pode acessar <a href="/loja">nossa loja.</a></p>
+            <div class="row mt-5 justify-content-around produtos-list" style="background:none">     
             @if (count($produtos) > 0)
             @foreach ($produtos as $produto)
-            <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
+            <div class="col-lg-5 col-md-7 col-sm-8 mb-4" style="background:none">
+              <div class="card h-100 h-md-70 produtos-list">
+                <a href="/loja"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
                 <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">{{$produto->nome}}</a>
+                  <h4 class="card-title text-center mt-3 mb-2 nome-produtos">
+                    <a href="/loja">{{$produto->nome}}</a>
                   </h4>
-                  <h5>R${{$produto->preco}}</h5>
-                  <p class="card-text">{{$produto->descricao}}</p>
+                  <p class="card-text descricao-produtos">{{$produto->descricao}}</p>
                 </div>
               </div>
             </div>
@@ -88,7 +85,7 @@
       <section id="fale-conosco" class="fale-conosco">
         <h1 class="text-center content-title">Fale Conosco</h1>
             <p class="subtext text-center">Você pode nos enviar um email ou contatar um dos nossos vendedores</p>
-        <div class="container">
+        <div class="container mt-5">
     <div class="row">
         <div class="col">
             <div class="card mb-3">
@@ -123,84 +120,6 @@
       </section>
 
 <!-- Footer -->
-<footer class="page-footer font-small blue pt-4">
-
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
-
-        <!-- Content -->
-        <h5 class="text-uppercase">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none pb-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
 <!-- Footer -->
    
 

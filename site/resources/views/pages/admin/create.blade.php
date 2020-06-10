@@ -1,7 +1,9 @@
-@extends('layout.adminHeader')
-      
-@section('content')
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+
+
     <div class="container">
+
         @include('layout.alerts')
         <h1>Adicionar Produto</h1>
         {!! Form::open(['action' => 'ProdutosController@store', 'enctype' => 'multipart/form-data']) !!}
@@ -35,4 +37,3 @@
         {!! Form::submit('Adicionar', ['class'=>'btn btn-success']) !!}
         {!! Form::close() !!}
     </div>
-@endsection

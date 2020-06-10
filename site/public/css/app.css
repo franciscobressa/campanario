@@ -10936,15 +10936,13 @@ a.text-dark:focus {
 body {
   margin: 0px;
   box-sizing: border-box;
-  background-image: url(/img/banner/background.png);
-}
-
-.navbar {
-  box-shadow: inset 0 0 70px 0 lightgrey !important;
-  color: #707070;
+  background-image: url(/img/banner/flower.png);
+  background-size: 2cm;
 }
 
 .navbar-middle {
+  box-shadow: inset 0 0 70px 0 lightgrey !important;
+  color: #707070;
   border-bottom-style: solid;
   border-bottom-color: green;
 }
@@ -10953,6 +10951,8 @@ body {
 
 .top-navbar {
   background-color: rgba(233, 227, 227, 0.089);
+  box-shadow: inset 0 0 70px 0 lightgrey !important;
+  color: #707070;
 }
 
 .top-navbar .icon {
@@ -11220,15 +11220,33 @@ body {
 
 .produtos {
   padding: 1em 10vw;
-  color: white;
-  border-bottom: 1px solid #085032;
-  background-color: #085032;
+  color: #085032;
   margin-top: 2em;
 }
 
+.produtos .subtext {
+  color: #085032;
+  line-height: 1.5em;
+}
+
 .produtos .content-title {
-  border-bottom: solid 1px white;
-  border-top: solid 1px white;
+  border-bottom: solid 1px #085032;
+  border-top: solid 1px #085032;
+}
+
+.descricao-produtos {
+  text-align: justify;
+  font-size: 1.2vw;
+}
+
+.nome-produtos a {
+  color: #085032;
+  font-family: "Merienda", cursive;
+  font-size: 1.7vw;
+}
+
+.produtos-list {
+  background-color: rgba(255, 255, 255, 0.404);
 }
 
 .fale-conosco {
@@ -11276,6 +11294,14 @@ body {
 
   .nossa-empresa div p {
     font-size: 1.8vw;
+  }
+
+  .descricao-produtos {
+    font-size: 1.4vw;
+  }
+
+  .nome-produtos a {
+    font-size: 1.9vw;
   }
 
   .subtext {
@@ -11362,10 +11388,6 @@ body {
     font-size: 3.3vw;
   }
 
-  .nossa-empresa {
-    padding: 0;
-  }
-
   .nossa-empresa .texto-2colunas {
     margin: 0 auto;
     -moz-column-count: 1;
@@ -11419,6 +11441,14 @@ body {
   .nav-link:hover {
     color: black !important;
   }
+
+  .descricao-produtos {
+    font-size: 2vw;
+  }
+
+  .nome-produtos a {
+    font-size: 2.5vw;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -11461,6 +11491,14 @@ body {
   .navbar-bottom {
     display: none;
   }
+
+  .descricao-produtos {
+    font-size: 2.5vw;
+  }
+
+  .nome-produtos a {
+    font-size: 3.1vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -11471,7 +11509,7 @@ body {
 
   .subtext {
     line-height: 1em;
-    font-size: 3vw;
+    font-size: 3.7vw;
   }
 
   .top-navbar .icon {
@@ -11504,6 +11542,14 @@ body {
     padding: 3%;
     line-height: 4vw;
   }
+
+  .descricao-produtos {
+    font-size: 3vw;
+  }
+
+  .nome-produtos a {
+    font-size: 4.2vw;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -11514,7 +11560,7 @@ body {
 
   .subtext {
     line-height: 1em;
-    font-size: 3.2vw;
+    font-size: 3.4vw;
   }
 
   .top-navbar .icon {
@@ -11552,6 +11598,14 @@ body {
     font-size: 3.5vw;
     padding: 3%;
     line-height: 4vw;
+  }
+
+  .descricao-produtos {
+    font-size: 3.2vw;
+  }
+
+  .nome-produtos a {
+    font-size: 4.4vw;
   }
 }
 

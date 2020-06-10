@@ -64,7 +64,6 @@
   font-size: 3.3vw;
 }
 .nossa-empresa{
-    padding: 0;
         .texto-2colunas{
       margin: 0 auto;
       column-count:1;
@@ -103,6 +102,7 @@ display: none;
 }
 
 
+
   .title{
     display: inline;
   }
@@ -122,4 +122,13 @@ display: none;
   .nav-link:hover{
     color:black !important;
   }
+
+  .descricao-produtos{
+  font-size: 2vw;
+}
+
+.nome-produtos a{
+  font-size: 2.5vw;
+}
+
 }

@@ -9,7 +9,8 @@
               <div class="col-lg-2">
         
                 @if (count($categorias) > 0)
-                    <h1 class="my-4">Categorias</h1>
+            <div class="card-header p-2 mt-3" style="background-color:rgb(8, 80, 50)"><h5 class="text-white">Categorias</h5></div>
+
                     @foreach ($categorias as $categoria)
                         <div class="list-group">
                             <a href="#" class="list-group-item">{{$categoria->nome}}</a>

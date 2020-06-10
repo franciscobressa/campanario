@@ -22,3 +22,9 @@ Route::get('/admin', 'PagesController@admin');
 Route::resource('/admin/produtos', 'ProdutosController');
 
 Route::post('/enviar', 'ContatoController@enviaContato');
+
+Auth::routes();
+
+Route::get('/login', 'HomeController@index')->name('home');
+
+

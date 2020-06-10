@@ -8,16 +8,13 @@
 body{
   margin: 0px; 
   box-sizing: border-box;
-  background-image: url(/img/banner/background.png);
-}
-
-.navbar{
-  box-shadow:  inset 0 0 70px 0 lightgrey !important;
-  color: rgb(112, 112, 112);
-
+  background-image: url(/img/banner/flower.png);
+  background-size: 2cm ;
 }
 
 .navbar-middle{
+  box-shadow:  inset 0 0 70px 0 lightgrey !important;
+  color: rgb(112, 112, 112);
   border-bottom-style: solid;
   border-bottom-color: green;
 }
@@ -26,7 +23,8 @@ body{
 
 .top-navbar {
   background-color: rgba(233, 227, 227, 0.089);
-  
+  box-shadow:  inset 0 0 70px 0 lightgrey !important;
+  color: rgb(112, 112, 112);
     .icon {
     height: 20px !important;
     width: 20px !important;
@@ -214,6 +212,7 @@ white-space: nowrap;
     .content-title{
       border-bottom: solid 1px rgb(8, 80, 50);
       border-top: solid 1px rgb(8, 80, 50);
+     
     }
   }
     .texto-2colunas{
@@ -291,17 +290,34 @@ white-space: nowrap;
 
 .produtos{
   padding: 1em 10vw;
-  color:white;
-  border-bottom: 1px solid rgb(8, 80, 50);
-  background-color: rgb(8, 80, 50);
+  color: rgb(8, 80, 50);
   margin-top: 2em;
 
+  .subtext{
+    color:rgb(8, 80, 50);
+    line-height: 1.5em;
+  }
+
     .content-title{
-      border-bottom: solid 1px white;
-      border-top: solid 1px white;
+      border-bottom: solid 1px rgb(8, 80, 50);
+      border-top: solid 1px rgb(8, 80, 50);
     }
 }
 
+.descricao-produtos{
+  text-align: justify;
+  font-size: 1.2vw;
+}
+
+.nome-produtos a{
+  color:rgb(8, 80, 50);
+  font-family: 'Merienda', cursive;
+  font-size: 1.7vw;
+}
+
+.produtos-list{
+  background-color:rgba(255, 255, 255, 0.404);
+}
 // FORMULÁRIO DE CONTATO 
 
 .fale-conosco{

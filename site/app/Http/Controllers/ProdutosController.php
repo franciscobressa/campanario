@@ -69,7 +69,7 @@ class ProdutosController extends Controller
         $produto->id_categoria = $request->input('categoria');
         $produto->save();
 
-        return redirect('/admin/produtos')->with('success', 'Item adicionado com sucesso!');
+        return redirect('/admin')->with('success', 'Item adicionado com sucesso!');
     }
 
     /**
