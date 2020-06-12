@@ -13,18 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index')->name('index');
 
 Route::get('/loja', 'PagesController@loja');
-
-Route::get('/admin', 'PagesController@admin');
-
-Route::resource('/admin/produtos', 'ProdutosController');
 
 Route::post('/enviar', 'ContatoController@enviaContato');
 
 Auth::routes();
 
-Route::get('/login', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user', 'UserController@index')->name('user');
+Route::get('/admin', 'AdminController@admin')->name('admin')->middleware('auth');
+
 
 

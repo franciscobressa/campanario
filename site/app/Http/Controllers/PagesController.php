@@ -14,14 +14,6 @@ class PagesController extends Controller
         return view('index')->with('produtos', $produtos);
     }
 
-    public function admin(){
-        return view('pages.admin.admin');
-    }
-    
-    public function adminProdutos(){
-        return view('pages.admin.produtos');
-    }
-
     public function loja(){
         $produtos = Produto::all();
         $categorias = Categoria::all();
