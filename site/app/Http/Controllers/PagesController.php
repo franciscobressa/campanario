@@ -20,4 +20,11 @@ class PagesController extends Controller
 
         return view('pages.loja', ['produtos' => $produtos], ['categorias' => $categorias]);
     }
+
+    public function shopItem($id){
+        $produto = Produto::find($id);
+        $categorias = Categoria::all();
+
+        return view('pages.shopitem', ['produto' => $produto], ['categorias' => $categorias]);
+    }
 }

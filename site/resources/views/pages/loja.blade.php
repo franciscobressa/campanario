@@ -1,4 +1,4 @@
-@extends('layout.header')
+@extends('layouts.header')
       
     @section('content')
 
@@ -9,7 +9,7 @@
               <div class="col-lg-2">
         
                 @if (count($categorias) > 0)
-            <div class="card-header p-2 mt-3" style="background-color:rgb(8, 80, 50)"><h5 class="text-white">Categorias</h5></div>
+                <div class="card-header p-2 mt-3" style="background-color:rgb(8, 80, 50)"><h5 class="text-white">Categorias</h5></div>
 
                     @foreach ($categorias as $categoria)
                         <div class="list-group">
@@ -32,11 +32,10 @@
                     @foreach ($produtos as $produto)
                     <div class="col-lg-3 col-md-6 mb-4">
                       <div class="card h-100">
-                        {{-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> --}}
-                        <a href="#"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
+                        <a href="/loja/{{$produto->id}}"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
                         <div class="card-body">
                           <h4 class="card-title">
-                            <a href="#">{{$produto->nome}}</a>
+                            <a href="/loja/{{$produto->id}}">{{$produto->nome}}</a>
                           </h4>
                           <h5>R${{$produto->preco}}</h5>
                           <p class="card-text">{{$produto->descricao}}</p>

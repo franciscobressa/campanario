@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Rotas desnecessárias
+// Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/user', 'UserController@index')->name('user');
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,12 +21,14 @@ Route::get('/', 'PagesController@index')->name('index');
 
 Route::get('/loja', 'PagesController@loja');
 
+Route::get('/loja/{id}', 'PagesController@shopItem');
+
+Route::resource('/admin/produtos', 'ProdutosController');
+
 Route::post('/enviar', 'ContatoController@enviaContato');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/user', 'UserController@index')->name('user');
 Route::get('/admin', 'AdminController@admin')->name('admin')->middleware('auth');
 
 

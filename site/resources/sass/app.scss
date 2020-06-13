@@ -117,13 +117,19 @@ white-space: nowrap;
   
 }
   
-.cart-btn{
+.icon-btn{
   img{
   height: 25px;
   }
 }
 
+.icon-btn:focus{
+  box-shadow: none;
+}
+
 .searchbar{
+  display: flex;
+  align-items: center;
   margin-bottom: auto;
   margin-top: auto;
   height: 40px;
@@ -139,8 +145,8 @@ white-space: nowrap;
     outline: 0;
     width: 0;
     caret-color:transparent;
-    line-height: 0px;
     transition: width 0.4s linear;
+    line-height: 0 !important;
     background:none;
     }
 
@@ -152,7 +158,7 @@ white-space: nowrap;
     }
 
     .searchbar:hover{
-    background-color: rgb(240, 238, 238);
+    background-color: white;
     border: 0.5px solid rgb(170, 170, 170);
     }
 
@@ -334,6 +340,14 @@ white-space: nowrap;
     p{
       font-size: 1.2vw;
     } 
+  }
+}
+
+// Dropdown
+
+.dropdown{
+  h5{
+    color:rgb(0, 122, 0);
   }
 }
 

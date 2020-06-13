@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        @include('layout.alerts')
+        @include('layouts.alerts')
         <h1>Adicionar Produto</h1>
         {!! Form::open(['action' => 'ProdutosController@store', 'enctype' => 'multipart/form-data']) !!}
         @csrf

@@ -11053,10 +11053,6 @@ body {
   height: 25px;
 }
 
-.icon-btn:focus {
-  box-shadow: none;
-}
-
 .searchbar {
   display: flex;
   align-items: center;
@@ -11268,10 +11264,6 @@ body {
 
 .fale-conosco .card-body p {
   font-size: 1.2vw;
-}
-
-.dropdown h5 {
-  color: #007a00;
 }
 
 @media only screen and (max-width: 1200px) {
