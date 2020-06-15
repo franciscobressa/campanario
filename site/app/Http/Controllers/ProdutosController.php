@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Produto;
 use App\Categoria;
+use Illuminate\Support\Facades\Storage;
 
 class ProdutosController extends Controller
 {
@@ -69,7 +70,7 @@ class ProdutosController extends Controller
         $produto->id_categoria = $request->input('categoria');
         $produto->save();
 
-        return redirect('/admin')->with('success', 'Item adicionado com sucesso!');
+        return redirect('/admin/produtos')->with('success', 'Item adicionado com sucesso!');
     }
 
     /**
@@ -91,7 +92,11 @@ class ProdutosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $produto = Produto::find($id);
+        $categorias = Categoria::all();
+        $produtoCat = Categoria::find($produto->id_categoria);
+
+        return view('pages.admin.edit', ['produto' => $produto],['categorias' => $categorias])->with('produtoCat', $produtoCat);
     }
 
     /**
@@ -103,7 +108,41 @@ class ProdutosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nome' => 'required',
+            'preco' => 'required',
+            'descricao' => 'required',
+            'foto' => 'image|max:1999',
+            'categoria' => 'required'
+        ]);
+        
+
+        $produto = Produto::find($id);
+
+        if($request->hasFile('foto')){
+        //Delete the old image from directory
+        SStorage::delete('public/produtos/'.$produto->foto);
+
+        // Handling image name
+        $fileNameExt = $request->file('foto')->getClientOriginalName();
+        $fileName = pathinfo($fileNameExt, PATHINFO_FILENAME);
+        $ext = $request->file('foto')->getClientOriginalExtension();
+        
+        $finalFileName = $fileName.'_'.time().'.'.$ext;
+
+        // Upload image
+        $path = $request->file('foto')->storeAs('public/produtos', $finalFileName);
+        $produto->foto = $finalFileName;
+        }
+        
+        // Saving product
+        $produto->nome = $request->input('nome');
+        $produto->preco = $request->input('preco');
+        $produto->descricao = $request->input('descricao');
+        $produto->id_categoria = $request->input('categoria');
+        $produto->save();
+
+        return redirect('/admin/produtos')->with('success', 'Item alterado com sucesso!');
     }
 
     /**
@@ -114,6 +153,9 @@ class ProdutosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $produto = Produto::find($id);
+        Storage::delete('public/produtos/'.$produto->foto);
+        $produto->delete();
+        return redirect('/admin/produtos')->with('success', 'Item excluído com sucesso!');   
     }
 }

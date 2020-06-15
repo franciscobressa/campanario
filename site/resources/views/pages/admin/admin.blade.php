@@ -3,11 +3,6 @@
 @section('content')
 <main>
     <div class="container-fluid">
- <main>
- <form method="get" action="admin/produtos/create">
-<button class="btn btn-primary mt-3 mb-3">Cadastrar Novo Produto</button>
-</form>
- </main>
         <div class="card mb-4">
             <div class="card-header"><i class="fas fa-table mr-1"></i>DataTable Example</div>
             <div class="card-body">

@@ -65,9 +65,14 @@ $(document).click(function(e){
 
 $('.search-btn').hover(function(){
     
-    $('.search-box').css('border-color', 'gray');
+$('.search-box').css('border-color', 'gray');
 }, function(){
         if(color){
         $('.search-box').css('border-color', 'transparent')
         }
 })
+
+$('#myalert').click(function(){
+    return confirm('Certeza que deseja excluir este item?');
+}
+);
