@@ -1,7 +1,8 @@
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> --}}
 
-
-
+    @extends('layouts.adminlayout')
+    @section('content')
+    
     <div class="container">
 
         @include('layouts.alerts')
@@ -14,7 +15,7 @@
         </div>
         <div class="form-group">
             {!! Form::label('Preço') !!}
-            {!! Form::number('preco', '', ['class' => 'form-control', 'step' => '0.01']) !!}
+            {!! Form::number('preco', '', ['class' => 'form-control', 'step' => '0.01', 'min' => '0.01']) !!}
         </div>
         <div class="form-group">
             {!! Form::label('Descrição') !!}
@@ -37,3 +38,4 @@
         {!! Form::submit('Adicionar', ['class'=>'btn btn-success']) !!}
         {!! Form::close() !!}
     </div>
+    @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.adminHeader')
+@extends('layouts.adminlayout')
       
 @section('content')
 
@@ -6,24 +6,10 @@
 
     <div class="row">
 
-      <div class="col-lg-2">
-
-        @if (count($categorias) > 0)
-            <h1 class="my-4">Categorias</h1>
-            @foreach ($categorias as $categoria)
-                <div class="list-group">
-                    <a href="#" class="list-group-item">{{$categoria->nome}}</a>
-                </div>
-            @endforeach
-        @endif 
-
-      </div>
-      <!-- /.col-lg-2 -->
-
       <div class="col-lg-10 pt-4">
-        @include('layout.alerts')
+        @include('layouts.alerts')
 
-        <a role="button" class="btn btn-success text-white" href="/admin/produtos/create">Adicionar Produto</a>
+        <a role="button" class="btn btn-success text-white" href="/admin/produtos/create">Cadastrar Novo Produto</a>
         <div class="row mt-4">
           
         @if (count($produtos) > 0)
@@ -36,9 +22,21 @@
                     <a href="/admin/produtos/{{$produto->id}}">{{$produto->nome}}</a>
                   </h4>
                   <h5>R$ {{$produto->preco}}</h5>
-                  <p class="card-text">{{$produto->descricao}}</p>
+                  @php
+                    if (strlen($produto->descricao) > 150) {
+                      $descricao = substr($produto->descricao, 0, 150).'...';
+                    }else{
+                      $descricao = $produto->descricao;
+                    }
+                  @endphp
+                  <p class="card-text text-justify">{{$descricao}}</p>
+                </div>
+                <div class="p-3">
+                  <a href="/admin/produtos/{{$produto->id}}/edit" type="button" class="btn btn-warning text-white">Editar</a>
+                  <a type="button" class="btn btn-danger text-white">Excluir</a>
                 </div>
               </div>
+              
             </div>
             @endforeach
         @else
