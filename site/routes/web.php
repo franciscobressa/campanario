@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@index')->name('index');
 
-Route::get('/loja', 'PagesController@loja');
+Route::get('/loja', 'PagesController@loja')->name('loja');
 
 Route::get('/loja/{id}', 'PagesController@shopItem');
 

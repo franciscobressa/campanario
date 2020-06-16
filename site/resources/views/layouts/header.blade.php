@@ -226,15 +226,16 @@
  
         
     </nav>
+    <form class="row p-0 m-0 search-sm">
+        <input class="form-control form-control-lg form-control-borderless col-10" style="width:100%" type="search" placeholder="Pesquisar...">
+        <button class="btn col-2 p-2" type="submit"><img style="height:20px"  src="/img/icon/search.png"></button>
+</form>
 </header>
 
 
 
                       
-<form class="row p-0 m-0 search-sm">
-        <input class="form-control form-control-lg form-control-borderless col-10" style="width:100%" type="search" placeholder="Pesquisar...">
-        <button class="btn col-2 p-2" type="submit"><img style="height:20px"  src="/img/icon/search.png"></button>
-</form>
+
      
 
     

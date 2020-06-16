@@ -1,7 +1,8 @@
 @extends('layouts.header')
       
     @section('content')
-
+  @if (session()->has('flash_notification.success')) <div class="alert alert-success">{!! session('flash_notification.success') !!}</div>
+@endif
         <div class="container-fluid px-5">
 
             <div class="row">

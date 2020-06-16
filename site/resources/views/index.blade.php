@@ -1,13 +1,16 @@
 @extends('layouts.header')
       
       @section('content')
+        
     
     <div class="inicio" id="inicio"></div>
-    <a href="/loja/">
-     <img src="/img/banner/4.png" class="banner container-fluid" alt="">
-    </a>
+    
+    @extends('layouts.carousel')
+  
+  
 
       <div class="nossa-empresa" id="nossa-empresa" >
+      
         
         <div class="div-text col-lg-12 p-0">
             <h1 class="text-center content-title">Nossa Empresa</h1>

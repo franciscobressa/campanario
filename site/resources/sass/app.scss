@@ -8,8 +8,7 @@
 body{
   margin: 0px; 
   box-sizing: border-box;
-  background-image: url(/img/banner/flower.png);
-  background-size: 2cm ;
+  background-image: url(/img/banner/background.png);
 }
 
 .navbar-middle{
@@ -17,6 +16,10 @@ body{
   color: rgb(112, 112, 112);
   border-bottom-style: solid;
   border-bottom-color: green;
+}
+
+.banner{
+  height:36vw;
 }
 
 /*TOP NAVBAR SOCIAL MEDIA*/
@@ -186,6 +189,10 @@ white-space: nowrap;
 
 .banner{
   padding:0;
+}
+
+.slide{
+
 }
 
 .content-title{
