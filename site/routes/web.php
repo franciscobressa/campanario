@@ -24,6 +24,7 @@ Route::get('/loja', 'PagesController@loja')->name('loja');
 Route::get('/loja/{id}', 'PagesController@shopItem');
 
 Route::resource('/admin/produtos', 'ProdutosController');
+Route::resource('/admin/imagens', 'ImagensController');
 
 Route::post('/enviar', 'ContatoController@enviaContato');
 
