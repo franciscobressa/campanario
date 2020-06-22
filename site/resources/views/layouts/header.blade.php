@@ -98,10 +98,11 @@
             <div class="menu-box menu-box-desk">
               <div class="container h-100">
                 <div class="d-flex justify-content-center h-100">
-                  <div class="searchbar">
+                  <form action="/loja/search" class="searchbar" method="GET">
+                    @csrf
                     <input class="search_input" type="text" name="" placeholder="Pesquisar...">
-                    <a href="#" class="search_icon"><img src="/img/icon/search.png"></a>
-                 </div>
+                    <a class="search_icon"><img src="/img/icon/search.png"></a>
+                  </form>
                 </div>
               </div>
               @guest

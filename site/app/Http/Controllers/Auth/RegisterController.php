@@ -69,7 +69,14 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        $user->attachRole('user');
+
+        if($data['email'] == 'loja@campanario.ind.br') {
+            $user->attachRole('superadministrator');// superadministrator
+
+        }else{
+            $user->attachRole('user');
+        }
+
         return $user;
     }
 }

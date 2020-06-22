@@ -351,6 +351,12 @@ white-space: nowrap;
   }
 }
 
+.paginate{
+  ul{
+    justify-content: center;
+  }
+}
+
 // Produtos
 
 @import 'lg';

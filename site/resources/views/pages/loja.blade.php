@@ -13,7 +13,7 @@
 
                     @foreach ($categorias as $categoria)
                         <div class="list-group">
-                            <a href="#" class="list-group-item">{{$categoria->nome}}</a>
+                            <a href="/loja?categoria={{$categoria->nome}}&id={{$categoria->id}}" class="list-group-item">{{$categoria->nome}}</a>
                         </div>
                     @endforeach
                 @endif 
@@ -25,39 +25,64 @@
         
         
                 <div class="row mt-4">
-                
-                {{-- @for ($i = 0; $i < 18; $i++) --}}
-                    
-                @if (count($produtos) > 0)
+                @if (isset($_GET['categoria']))
+                  @if (count($produtos) > 0)
                     @foreach ($produtos as $produto)
-                    <div class="col-lg-3 col-md-6 mb-4">
-                      <div class="card h-100">
-                        <a href="/loja/{{$produto->id}}"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="/loja/{{$produto->id}}">{{$produto->nome}}</a>
-                          </h4>
-                          <h5>R${{$produto->preco}}</h5>
-                          @php
-                            if (strlen($produto->descricao) > 150) {
-                              $descricao = substr($produto->descricao, 0, 150).'...';
-                            }else{
-                              $descricao = $produto->descricao;
-                            }
-                          @endphp
-                          <p class="card-text text-justify">{{$descricao}}</p>
+                      @if($produto->id_categoria == $_GET['id'])
+                      <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                          <a href="/loja/{{$produto->id}}"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="/loja/{{$produto->id}}">{{$produto->nome}}</a>
+                            </h4>
+                            <h5>R${{$produto->preco}}</h5>
+                            @php
+                              if (strlen($produto->descricao) > 150) {
+                                $descricao = substr($produto->descricao, 0, 150).'...';
+                              }else{
+                                $descricao = $produto->descricao;
+                              }
+                            @endphp
+                            <p class="card-text text-justify">{{$descricao}}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    @endforeach
+                      @endif
+                      @endforeach
+                  @else
+                      <h2>Não há produtos cadastrados!</h2>
+                  @endif
                 @else
-                    <h2>Não há produtos!</h2>
+                  @if (count($produtos) > 0)
+                      @foreach ($produtos as $produto)
+                      <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                          <a href="/loja/{{$produto->id}}"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="/loja/{{$produto->id}}">{{$produto->nome}}</a>
+                            </h4>
+                            <h5>R${{$produto->preco}}</h5>
+                            @php
+                              if (strlen($produto->descricao) > 150) {
+                                $descricao = substr($produto->descricao, 0, 150).'...';
+                              }else{
+                                $descricao = $produto->descricao;
+                              }
+                            @endphp
+                            <p class="card-text text-justify">{{$descricao}}</p>
+                          </div>
+                        </div>
+                      </div>
+                      @endforeach
+                      
+                  @else
+                      <h2>Não há produtos cadastrados!</h2>
+                  @endif
                 @endif
-                    
-                {{-- @endfor --}}
-        
-                </div>
-                <!-- /.row -->
+                </div><!-- /.row -->
+                <div class="paginate">{{$produtos->links()}} </div>
         
               </div>
               <!-- /.col-lg-9 -->

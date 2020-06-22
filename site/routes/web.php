@@ -31,5 +31,4 @@ Auth::routes();
 
 Route::get('/admin', 'AdminController@admin')->name('admin')->middleware('auth');
 
-
-
+Route::get('/loja/search', 'PagesController@search');

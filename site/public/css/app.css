@@ -11274,6 +11274,10 @@ body {
   color: #007a00;
 }
 
+.paginate ul {
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1200px) {
   .navbar-brand {
     height: 9.5vw;
