@@ -10936,8 +10936,7 @@ a.text-dark:focus {
 body {
   margin: 0px;
   box-sizing: border-box;
-  background-image: url(/img/banner/flower.png);
-  background-size: 2cm;
+  background-image: url(/img/banner/background.png);
 }
 
 .navbar-middle {
@@ -10945,6 +10944,10 @@ body {
   color: #707070;
   border-bottom-style: solid;
   border-bottom-color: green;
+}
+
+.banner {
+  height: 36vw;
 }
 
 /*TOP NAVBAR SOCIAL MEDIA*/
@@ -11343,6 +11346,10 @@ body {
     position: relative;
   }
 
+  .banner {
+    height: 38vw;
+  }
+
   .navbar-middle {
     border: none;
   }
@@ -11471,6 +11478,10 @@ body {
     width: 16vw;
   }
 
+  .banner {
+    height: 41vw;
+  }
+
   .foto-galeria {
     margin: 0 3em;
   }
@@ -11544,7 +11555,7 @@ body {
   }
 
   .banner {
-    height: 45vw;
+    height: 54vw;
   }
 
   .content-title {
@@ -11601,7 +11612,7 @@ body {
   }
 
   .banner {
-    height: 50vw;
+    height: 59vw;
   }
 
   .content-title {
