@@ -122,7 +122,7 @@ class ProdutosController extends Controller
 
         if($request->hasFile('foto')){
         //Delete the old image from directory
-        SStorage::delete('public/produtos/'.$produto->foto);
+        Storage::delete('public/produtos/'.$produto->foto);
 
         // Handling image name
         $fileNameExt = $request->file('foto')->getClientOriginalName();

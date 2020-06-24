@@ -61,19 +61,58 @@
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
     </button>
-  <a href="/">
+<a href="/">
     <div class="navbar-brand brand-sm mx-auto" href="#">
     </div>
-  </a>
-<div class="menu-box-sm">
+  </a> 
+<!-- <div class="menu-box-sm">
             <button data-toggle="collapse" type="button" data-target="#" class="cart-btn">
             <img src="/img/icon/cart.png">
           </button>
-    </div>
+    </div> -->
+
+<span class="dropdown-sm">
+    @guest
+              <div class="dropdown">
+                <button class="btn icon-btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{-- <a type="button" data-target="#demo" class="icon-btn " href="/home"><img src="/img/icon/user.png"></a> --}}
+                  <img src="/img/icon/user.png">
+                </button>
+                
+                <div class="dropdown-menu dropdown-menu-right text-center p-3 h5" aria-labelledby="dropdownMenuButton">
+                  <a class="btn btn-success" type="button" href="/login">Login</a>
+                    <div class="mt-3 mb-1"><small class="text-muted">Não tem uma conta?</small></div>
+                  <a class="btn btn-secondary" href="/register">Registre-se!</a>
+                </div>
+              </div>
+              @else
+              <div class="dropdown">
+                <button class="btn icon-btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="/img/icon/cart.png">
+                </button>
+                
+                <div class="dropdown-menu dropdown-menu-right text-center p-3 h5" aria-labelledby="dropdownMenuButton">
+                <h5 class="mb-3">{{Auth::user()->name}}</h5> 
+                Não há compras no seu carrinho!
+                <div class="text-muted">Deseja sair?</div>
+                    <a class="btn btn-success mt-1" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        {{ __('Sair') }}
+                    </a>
+                </div>
+              </div>
+                <a data-toggle="collapse" type="button" data-target="#demo" class="icon-btn"></a>
+
+              @endguest
+
+              </span>
+
+
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
           @if (Request::is('loja/*') || Request::path() == 'loja')
-            
+
             <ul class="navbar-nav">
 
               <li class="nav-item nav-item-hover my-auto ">
@@ -125,6 +164,7 @@
                 </button>
                 
                 <div class="dropdown-menu dropdown-menu-right text-center p-3 h5" aria-labelledby="dropdownMenuButton">
+                  
                   Não há compras no seu carrinho!
                 </div>
               </div>
@@ -143,7 +183,7 @@
                     <a class="btn btn-danger mt-1" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                        {{ __('Sair') }}
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

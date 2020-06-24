@@ -11281,6 +11281,14 @@ body {
   justify-content: center;
 }
 
+.dropdown-sm {
+  display: none;
+}
+
+.categorias-sm {
+  display: none;
+}
+
 @media only screen and (max-width: 1200px) {
   .navbar-brand {
     height: 9.5vw;
@@ -11469,6 +11477,19 @@ body {
 
   .nome-produtos a {
     font-size: 2.5vw;
+  }
+
+  .dropdown-sm {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  .categorias-desk {
+    display: none;
+  }
+
+  .categorias-sm {
+    display: block;
   }
 }
 

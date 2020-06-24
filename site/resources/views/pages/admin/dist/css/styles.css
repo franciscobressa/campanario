@@ -4442,6 +4442,7 @@ input[type=button].btn-block {
   margin-bottom: 15px;
 }
 @media (min-width: 576px) {
+
   .card-deck {
     display: flex;
     flex-flow: row wrap;

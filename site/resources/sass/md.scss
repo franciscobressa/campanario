@@ -136,4 +136,16 @@ display: none;
   font-size: 2.5vw;
 }
 
+.dropdown-sm{
+  display:flex;  
+  white-space: nowrap;
+}
+
+.categorias-desk{
+  display: none;
+}
+
+.categorias-sm{
+  display: block;
+}
 }

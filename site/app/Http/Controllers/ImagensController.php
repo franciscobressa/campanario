@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Imagens;
+use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
 
@@ -54,7 +55,10 @@ class ImagensController extends Controller
      */
     public function edit($id)
     {
-        //
+        $img = Imagens::find($id);
+        return view('pages.admin.imagens', ['imagens' => $img]);
+
+
     }
 
     /**
@@ -66,6 +70,20 @@ class ImagensController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $img = Imagens::find($id);
+
+        Storage::delete('public/imagens/'.$img->foto);
+
+        $fileNameExt = $request->file('foto')->getClientOriginalName();
+        $fileName = pathinfo($fileNameExt, PATHINFO_FILENAME);
+        $ext = $request->file('foto')->getClientOriginalExtension();
+        
+        $finalFileName = $fileName.'_'.time().'.'.$ext;
+        $path = $request->file('foto')->storeAs('public/imagens', $finalFileName);
+        $img->foto = $finalFileName;
+        $img->save();
+        return redirect('/admin/imagens')->with('success', 'Item alterado com sucesso!');
+
+
     }
 }
