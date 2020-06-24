@@ -48,10 +48,10 @@
                             <div class="sb-sidenav-menu-heading">Compras</div>
                             <a class="nav-link" href="/admin"><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>Painel de Controle</a>
 
-                            <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link" href="/admin/imagens"><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>Imagens</a>
+                            <div class="sb-sidenav-menu-heading">Cadastrar e Alterar</div>
+                            <a class="nav-link" href="/admin/imagens"><div class="sb-nav-link-icon"><i class="fas fa-images"></i></div>Imagens</a>
                             
-                            <a class="nav-link" href="/admin/produtos"><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>Produtos</a>
+                            <a class="nav-link" href="/admin/produtos"><div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>Produtos</a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

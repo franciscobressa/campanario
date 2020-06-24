@@ -20,15 +20,15 @@ class CreateModelImagensTable extends Migration
             $table->string('descricao');
             $table->timestamps();
         });
-        Imagens::create(['descricao' => 'Logo', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Banner 1', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Banner 2', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Banner 3', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Foto da Fábrica', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Galeria 1', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Galeria 2', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Galeria 3', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Galeria 4', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Logo (Tamanho recomendado em pixels: 500 x 500)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Banner 1 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Banner 2 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Banner 3 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Foto da Fábrica (Tamanho recomendado em pixels: 950 x 540)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Galeria 1 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Galeria 2 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Galeria 3 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Galeria 4 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'Ervas']);
     }
 
     /**

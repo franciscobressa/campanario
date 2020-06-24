@@ -1,41 +1,81 @@
-@extends('layouts.adminlayout')
-      
+@extends('layouts.adminlayout')      
 @section('content')
 
-<div class="container-fluid px-5">
+<div class="container-fluid ">
 
-    <div class="row">
-
-      <div class="col-lg-10 pt-4">
-
-@foreach( $imagens as $img)
-{{$img->descricao}}
-<div class="row">
-<div class="col-12 ">
-<img style="height:150px; width: 150px"src="{{url('storage/imagens/'.$img->foto)}}">
-
-{!! Form::open(['action' => ['ImagensController@update', $img->id], 'enctype' => 'multipart/form-data']) !!}
-        @csrf
-
-            {!! Form::file('foto') !!}
-            {!! Form::submit('Alterar', ['class'=>'btn btn-success']) !!}
-            {!! Form::hidden('_method', 'PUT') !!}
-            {!! Form::close() !!}
-
-            
+    @foreach( $imagens as $img)
+    <div class="container m-0 ">
+<center>
+  <div class="card mt-3">
+    <div class="card-header">{{$img->descricao}}</div>
+    <div class="card-body text-center" style="background-image:url({{url('storage/imagens/'.$img->foto)}})">          
+    <img class="p-2" >
+</div> 
+           {!! Form::open(['action' => ['ImagensController@update', $img->id], 'enctype' => 'multipart/form-data']) !!}
+          @csrf
+          <div class="card-footer text-center">   
+          <input type="file" class="file mt-2" name="foto" value="foto" required> 
+          <button type="submit" class="btn-primary btn alterar mt-2">Alterar Imagem</button>
+          {!! Form::hidden('_method', 'PUT') !!}
+          {!! Form::close() !!}</div>
+  </div>
 </div>
-</div>
+
+
 @endforeach
 
-      </div>
-        <!-- /.row -->
+<style>
 
-      </div>
-      <!-- /.col-lg-10 -->
+img{
+  height:25vw;
+}
 
-    </div>
-    <!-- /.row -->
+.card-body{
+  background-size:100% 100%;
+}
 
-  </div>
+.card{
+    height:50vw;
+    width:55vw;
+
+  }
+
+@media only screen and (max-width: 600px) {
+  .card-header{
+    font-size:0.7em;
+  }
+  .card-body{
+  background-size:100% 100%;
+}
+  .alterar{
+    font-size:2.2vw;
+
+  }
+
+  .card-footer{
+    display:flex;
+    justify-content:space-between;
+  }
+
+  .file{
+    font-size:2vw;
+
+    width:50%;
+  }
+
+  img{
+    height:30vw;
+  }
+
+  .card{
+    width:75vw;
+    height:85vw;
+  }
+
+
+}
+
+</style>
   {{-- container-fluid --}}
 @endsection
+
