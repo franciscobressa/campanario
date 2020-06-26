@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./carrinho')
 
 header = $('header').innerHeight();
 

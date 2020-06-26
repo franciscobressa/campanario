@@ -11281,6 +11281,10 @@ body {
   justify-content: center;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .dropdown-sm {
   display: none;
 }

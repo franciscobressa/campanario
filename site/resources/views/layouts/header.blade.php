@@ -111,7 +111,7 @@
 
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
-          @if (Request::is('loja/*') || Request::path() == 'loja')
+          @if (!Request::is('/'))
 
             <ul class="navbar-nav">
 
@@ -164,8 +164,8 @@
                 </button>
                 
                 <div class="dropdown-menu dropdown-menu-right text-center p-3 h5" aria-labelledby="dropdownMenuButton">
-                  
                   Não há compras no seu carrinho!
+                  <a href="{{route('carrinho')}}" class="btn btn-primary mt-2">Ir para o carrinho</a>
                 </div>
               </div>
                 <a data-toggle="collapse" type="button" data-target="#demo" class="icon-btn"></a>

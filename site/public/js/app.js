@@ -37227,6 +37227,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./carrinho */ "./resources/js/carrinho.js");
+
 header = $('header').innerHeight();
 $('body').css("padding-top", header);
 $(window).resize(function () {
@@ -37332,6 +37334,20 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/carrinho.js":
+/*!**********************************!*\
+  !*** ./resources/js/carrinho.js ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.carrinhoAdicionarProduto = function (idproduto) {
+  $('#form-adicionar-produto input[name="id"]').val(idproduto);
+  $('#form-adicionar-produto').submit();
+};
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -37350,8 +37366,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/francisco/Dev/campanario/site/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/francisco/Dev/campanario/site/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/campanario/site/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/campanario/site/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

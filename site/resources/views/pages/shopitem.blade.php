@@ -27,6 +27,11 @@
             <h4>R${{$produto->preco}}</h4>
             <p class="card-text">{{$produto->descricao}}</p>
           </div>
+          <form action="{{route('carrinho.adicionar')}}" method="POST">
+            @csrf
+            <input type="hidden" name="id" value="{{$produto->id}}">
+            <button class="btn btn-success m-3 float-right">Comprar</button>
+          </form>
         </div>
         <!-- /.card -->
 
