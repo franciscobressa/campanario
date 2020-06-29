@@ -11273,6 +11273,20 @@ body {
   font-size: 1.2vw;
 }
 
+.produtos-loja,
+a {
+  color: #085032;
+}
+
+.produtos-loja .card-title,
+.produtos-loja h4,
+.produtos-loja a,
+a .card-title,
+a h4,
+a a {
+  font-family: "Merienda", cursive;
+}
+
 .dropdown h5 {
   color: #007a00;
 }

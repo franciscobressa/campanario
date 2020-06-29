@@ -34,10 +34,10 @@ Route::get('/admin', 'AdminController@admin')->name('admin')->middleware('auth')
 
 Route::get('/loja/search', 'PagesController@search');
 
-Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho');
+Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho')->middleware('auth');
 
 Route::get('/carrinho/adicionar', function () {
-    return redirect()->route('index');
-});
+    return redirect()->back('index');
+})->middleware('auth');
 
-Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('carrinho.adicionar');
+Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('carrinho.adicionar')->middleware('auth');

@@ -37366,8 +37366,8 @@ window.carrinhoAdicionarProduto = function (idproduto) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/campanario/site/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/campanario/site/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/francisco/Dev/campanario/site/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/francisco/Dev/campanario/site/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

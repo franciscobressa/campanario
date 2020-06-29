@@ -8,6 +8,7 @@
     <link rel="icon" href="{{ URL::asset('img/favicon.png') }}" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -65,11 +66,6 @@
     <div class="navbar-brand brand-sm mx-auto" href="#">
     </div>
   </a> 
-<!-- <div class="menu-box-sm">
-            <button data-toggle="collapse" type="button" data-target="#" class="cart-btn">
-            <img src="/img/icon/cart.png">
-          </button>
-    </div> -->
 
 <span class="dropdown-sm">
     @guest
@@ -93,7 +89,8 @@
                 
                 <div class="dropdown-menu dropdown-menu-right text-center p-3 h5" aria-labelledby="dropdownMenuButton">
                 <h5 class="mb-3">{{Auth::user()->name}}</h5> 
-                Não há compras no seu carrinho!
+                <a href="{{route('carrinho')}}" class="btn btn-primary mt-2 mb-3">Ir para o carrinho</a>
+
                 <div class="text-muted">Deseja sair?</div>
                     <a class="btn btn-success mt-1" href="{{ route('logout') }}"
                       onclick="event.preventDefault();

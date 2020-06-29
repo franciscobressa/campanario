@@ -350,6 +350,13 @@ white-space: nowrap;
   }
 }
 
+.produtos-loja, a{
+  color: rgb(8, 80, 50);
+  .card-title, h4, a{
+    font-family: 'Merienda', cursive; 
+  }
+}
+
 // Dropdown
 
 .dropdown{

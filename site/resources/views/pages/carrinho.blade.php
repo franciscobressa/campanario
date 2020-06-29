@@ -1,64 +1,119 @@
 @extends('layouts.header')
 @section('content')	
-<div class="container p-1">
-		@include('layouts.alerts')
-			<h3>Produtos no Carrinho</h3>
-			<hr/>
-			@forelse($pedidos as $pedido)
-				<h5>Pedido: {{$pedido->id}}</h5>
-				<h5>Criado em: {{$pedido->created_at->format('d/m/Y H:i')}}</h5>
+<!--Section: Block Content-->
+<section>
+<div class="container-fluid mt-2">
+@include('layouts.alerts')
 
-				<table>
-					<thead>
-						<tr>
-							<th></th>
-							<th>Quantidade</th>
-							<th>Produto</th>
-							<th>Valor Unitário</th>
-							<th>Total</th>
-						</tr>
-					</thead>
-					<tbody>
-						@php
-							$total_pedido = 0;
-						@endphp
-						@foreach($pedido->pedido_produtos as $pedido_produto)
-						<tr>
-							<td>
-								<img width="100" height="100" src="{{url('storage/produtos/'.$pedido_produto->produto->foto)}}">
-							</td>
-							<td class="center-align">
-								<div class="center-align">
+</div>	
+  <!--Grid row-->
+  <div class="row p-3">
+
+    <!--Grid column-->
+    <div class="col-lg-8 pr-0">
+
+      <!-- Card -->
+      <div class="card wish-list mb-3 ">
+        <div class="card-body ">
+
+          <h5 class="mb-4">Seu carrinho</h5>
+		@forelse($pedidos as $pedido)
+        @php
+        $total_pedido = 0;
+        @endphp
+		@foreach($pedido->pedido_produtos as $pedido_produto)
+
+
+          <div class="row mb-4">
+            <div class="col-md-5 col-lg-3 col-xl-3">
+              <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                <img class="img-fluid w-100"
+                  src="{{url('storage/produtos/'.$pedido_produto->produto->foto)}}" alt="Sample">
+              </div>
+            </div>
+            <div class="col-md-7 col-lg-9 col-xl-9">
+              <div>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5>{{$pedido_produto->produto->nome}}</h5>
+                    <p class="mb-3 text-muted text-uppercase small">{{$pedido_produto->produto->descricao}}</p>
+					<div >
 									<a class="col">-</a>
 									<span class="col">{{$pedido_produto->qtd}}</span>
 									<a class="col cursor-pointer" onclick="carrinhoAdicionarProduto({{$pedido_produto->produto->id}})">+</a>
 								</div>
-								<a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Retirar produto do carrinho?">Retirar produto</a>
-							</td>
-							<td>{{$pedido_produto->produto->nome}}</td>
-							<td>R$ {{number_format($pedido_produto->produto->preco, 2, ',', '.')}}</td>
-							@php
-								$total_pedido += $pedido_produto->valores;
-							@endphp
-							<td>R$ {{number_format($pedido_produto->valores, 2, ',', '.')}}</td>	
-						</tr>
-						@endforeach
-					</tbody>
-				</table>
-				<div class="row">
-					<strong >Total do pedido: </strong>
-					<span >R$ {{number_format($total_pedido, 2, ',', '.')}}</span>
-				</div>
-				<div class="row">
-					<a href="{{route('loja')}}" class="offset-lg-6 btn btn-success text-white">Continuar comprando</a>
-				</div>
-			@empty
-				<h5>Não há nenhum pedido no carrinho</h5>
-			@endforelse
-	</div>
+                  </div>
+				  
+                  <div>
 
-	<form action="{{route('carrinho.adicionar')}}" method="POST" id="form-adicionar-produto">
-		@csrf
-		<input type="hidden" name="id">
-	</form>
+                    <small id="passwordHelpBlock" class="form-text text-muted text-center">
+            		</small>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
+                  </div>
+                   
+                  <p class="mb-0"><span><strong>R$ {{number_format($pedido_produto->produto->preco, 2, ',', '.')}}</strong></span></p>
+				  @php
+                    $total_pedido += $pedido_produto->valores;
+                    @endphp
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+
+		  @endforeach
+
+        </div>
+      </div>
+      <!-- Card -->
+
+
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-4">
+
+      <!-- Card -->
+      <div class="card mb-3">
+        <div class="card-body">
+
+          <h5 class="mb-3">Valor Total de</h5>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+              Produtos
+              <span>R$ {{number_format($total_pedido, 2, ',', '.')}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              Frete
+              <span>Gratis</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+              <div>
+                <strong>Valor final</strong>
+              </div>
+              <span><strong>R$ {{number_format($total_pedido, 2, ',', '.')}}</strong></span>
+            </li>
+          </ul>
+
+          <button type="button" class="btn btn-primary btn-block waves-effect waves-light">Finalizar compra</button>
+
+        </div>
+      </div>
+</section>
+    @empty
+        <h5>Não há nenhum pedido no carrinho</h5>
+    @endforelse
+    <form action="{{route('carrinho.adicionar')}}" method="POST" id="form-adicionar-produto">
+     @csrf
+     <input type="hidden" name="id">
+    </form>
 @endsection

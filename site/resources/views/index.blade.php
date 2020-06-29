@@ -64,10 +64,10 @@
       <section  id="produtos" class="produtos">
         <h1 class="text-center content-title">Produtos</h1>
             <p class="subtext text-center">Conheça nossos produtos e aproveite o verdadeiro sabor da erva mate :)<br>Você também pode acessar <a href="/loja">nossa loja.</a></p>
-            <div class="row mt-5 justify-content-around produtos-list" style="background:none">     
+            <div class="row mt-5 justify-content-around produtos-list bg-white" >     
             @if (count($produtos) > 0)
             @foreach ($produtos as $produto)
-            <div class="col-lg-5 col-md-7 col-sm-8 mb-4" style="background:none">
+            <div class="col-lg-5 col-md-7 col-sm-8 mb-4 bg-white" >
               <div class="card h-100 h-md-70 produtos-list">
                 <a href="/loja"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
                 <div class="card-body">

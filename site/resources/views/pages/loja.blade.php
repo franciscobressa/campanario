@@ -40,19 +40,19 @@
         <div class="col-lg-10">
         
         
-                <div class="row mt-3">
+                <div class="row mt-3 ">
                 @if (isset($_GET['categoria']))
                   @if (count($produtos) > 0)
                     @foreach ($produtos as $produto)
                       @if($produto->id_categoria == $_GET['id'])
-                      <div class="col-lg-3 col-md-6 mb-4">
+                      <div class="col-lg-3 col-md-6 mb-4 produtos-loja">
                         <div class="card h-100">
                           <a href="/loja/{{$produto->id}}"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
                           <div class="card-body">
-                            <h4 class="card-title">
+                            <h4 class="card-title produtos-loja">
                               <a href="/loja/{{$produto->id}}">{{$produto->nome}}</a>
                             </h4>
-                            <h5>R${{$produto->preco}}</h5>
+                            <h5 class="produtos-loja">R${{$produto->preco}}</h5>
                             @php
                               if (strlen($produto->descricao) > 150) {
                                 $descricao = substr($produto->descricao, 0, 150).'...';
@@ -60,7 +60,7 @@
                                 $descricao = $produto->descricao;
                               }
                             @endphp
-                            <p class="card-text text-justify">{{$descricao}}</p>
+                            <p class="card-text text-justify produtos-loja">{{$descricao}}</p>
                           </div>
                         </div>
                       </div>
@@ -76,10 +76,10 @@
                         <div class="card h-100">
                           <a href="/loja/{{$produto->id}}"><img class="card-img-top" src="{{url('storage/produtos/'.$produto->foto)}}" alt=""></a>
                           <div class="card-body">
-                            <h4 class="card-title">
+                            <h4 class="card-title produtos-loja">
                               <a href="/loja/{{$produto->id}}">{{$produto->nome}}</a>
                             </h4>
-                            <h5>R${{$produto->preco}}</h5>
+                            <h5 class="produtos-loja">R${{$produto->preco}}</h5>
                             @php
                               if (strlen($produto->descricao) > 150) {
                                 $descricao = substr($produto->descricao, 0, 150).'...';
@@ -87,7 +87,7 @@
                                 $descricao = $produto->descricao;
                               }
                             @endphp
-                            <p class="card-text text-justify">{{$descricao}}</p>
+                            <p class="card-text text-justify produtos-loja">{{$descricao}}</p>
                           </div>
                         </div>
                       </div>

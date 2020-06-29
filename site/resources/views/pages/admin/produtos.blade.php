@@ -20,14 +20,7 @@
                     <a href="/admin/produtos/{{$produto->id}}">{{$produto->nome}}</a>
                   </h4>
                   <h5>R$ {{$produto->preco}}</h5>
-                  @php
-                    if (strlen($produto->descricao) > 150) {
-                      $descricao = substr($produto->descricao, 0, 150).'...';
-                    }else{
-                      $descricao = $produto->descricao;
-                    }
-                  @endphp
-                  <p class="card-text text-justify">{{$descricao}}</p>
+
                 </div>
                 <div class="p-3">
                   <a href="/admin/produtos/{{$produto->id}}/edit" type="button" class="btn btn-warning text-white">Editar</a> 
