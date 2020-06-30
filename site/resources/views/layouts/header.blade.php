@@ -63,7 +63,9 @@
               <span class="navbar-toggler-icon"></span>
     </button>
 <a href="/">
-    <div class="navbar-brand brand-sm mx-auto" href="#">
+<?php $img = $imagens[0]->foto ?>
+
+    <div class="navbar-brand brand-sm mx-auto" style="background-image: url(/storage/imagens/{{$img}})" href="#">
     </div>
   </a> 
 

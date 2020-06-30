@@ -27,8 +27,9 @@ class PagesController extends Controller
     public function shopItem($id){
         $produto = Produto::find($id);
         $categorias = Categoria::all();
+        $imagens = Imagens::all();
 
-        return view('pages.shopitem', ['produto' => $produto], ['categorias' => $categorias]);
+        return view('pages.shopitem', ['produto' => $produto], ['categorias' => $categorias])->with(compact('imagens'));
     }
 
     
