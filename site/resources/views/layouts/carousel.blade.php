@@ -21,13 +21,16 @@
   <!-- The slideshow -->
   <div class="carousel-inner banner">
     <div class="carousel-item active">
-      <img src="/img/banner/4.png" alt="Los Angeles" width="1100" height="500">
+      <?php $img = $imagens[1]->foto ?>
+      <img src="{{asset('/storage/imagens/'.$img)}}" alt="Los Angeles" width="1100" height="500">
     </div>
     <div class="carousel-item">
-      <img src="/img/banner/4.png" alt="Chicago" width="1100" height="500">
+      <?php $img = $imagens[2]->foto ?>
+      <img src="{{asset('/storage/imagens/'.$img)}}" alt="Chicago" width="1100" height="500">
     </div>
     <div class="carousel-item">
-      <img src="/img/banner/4.png" alt="New York" width="1100" height="500">
+      <?php $img = $imagens[3]->foto ?>
+      <img src="{{asset('/storage/imagens/'.$img)}}" alt="New York" width="1100" height="500">
     </div>
   </div>
   

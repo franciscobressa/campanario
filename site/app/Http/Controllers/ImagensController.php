@@ -72,15 +72,46 @@ class ImagensController extends Controller
     {
         $img = Imagens::find($id);
 
-        Storage::delete('public/imagens/'.$img->foto);
+        
 
         $fileNameExt = $request->file('foto')->getClientOriginalName();
-        $fileName = pathinfo($fileNameExt, PATHINFO_FILENAME);
+        //$fileName = pathinfo($fileNameExt, PATHINFO_FILENAME);
         $ext = $request->file('foto')->getClientOriginalExtension();
+        $finalFileName; $pathFile;
         
-        $finalFileName = $fileName.'_'.time().'.'.$ext;
-        $path = $request->file('foto')->storeAs('public/imagens', $finalFileName);
-        $img->foto = $finalFileName;
+        switch (true) {
+            case ($img->id == 1):
+                Storage::delete('/public/imagens/'.$img->foto);
+                $fileName = 'logo';
+                $finalFileName = $fileName.'.'.$ext;
+                $pathFile = $finalFileName;
+                $path = $request->file('foto')->storeAs('public/imagens', $finalFileName);
+                break;  
+            case ($img->id > 1 && $img->id < 5):
+                Storage::delete('public/imagens/'.$img->foto);
+                $num = $img->id - 1;
+                $fileName = 'banner_'.$num;
+                $finalFileName = $fileName.'.'.$ext;
+                $pathFile = 'banner/'.$finalFileName;
+                $path = $request->file('foto')->storeAs('public/imagens/banner', $finalFileName);
+                break;
+            case ($img->id == 5):
+                Storage::delete('public/imagens/'.$img->foto);
+                $fileName = 'fabrica';
+                $finalFileName = $fileName.'.'.$ext;
+                $pathFile = $finalFileName;
+                $path = $request->file('foto')->storeAs('public/imagens', $finalFileName);
+                break;  
+            case ($img->id > 5):
+                Storage::delete('public/imagens/'.$img->foto);
+                $num = $img->id - 5;
+                $fileName = 'galeria_'.$num;
+                $finalFileName = $fileName.'.'.$ext;
+                $pathFile = 'galeria/'.$finalFileName;
+                $path = $request->file('foto')->storeAs('public/imagens/galeria', $finalFileName);
+                break;
+        }
+        $img->foto = $pathFile;
         $img->save();
         return redirect('/admin/imagens')->with('success', 'Item alterado com sucesso!');
 

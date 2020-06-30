@@ -20,15 +20,15 @@ class CreateModelImagensTable extends Migration
             $table->string('descricao');
             $table->timestamps();
         });
-        Imagens::create(['descricao' => 'Logo (Tamanho recomendado em pixels: 500 x 500)', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Banner 1 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Banner 2 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Banner 3 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Foto da Fábrica (Tamanho recomendado em pixels: 950 x 540)', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Galeria 1 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Galeria 2 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Galeria 3 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'Ervas']);
-        Imagens::create(['descricao' => 'Galeria 4 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'Ervas']);
+        Imagens::create(['descricao' => 'Logo (Tamanho recomendado em pixels: 500 x 500)', 'foto' => 'logo.png']);
+        Imagens::create(['descricao' => 'Banner 1 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'banner/banner_1.png']);
+        Imagens::create(['descricao' => 'Banner 2 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'banner/banner_2.png']);
+        Imagens::create(['descricao' => 'Banner 3 (Tamanho recomendado em pixels: 1200 x 500)', 'foto' => 'banner/banner_3.png']);
+        Imagens::create(['descricao' => 'Foto da Fábrica (Tamanho recomendado em pixels: 950 x 540)', 'foto' => 'fabrica.png']);
+        Imagens::create(['descricao' => 'Galeria 1 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'galeria/galeria_1.png']);
+        Imagens::create(['descricao' => 'Galeria 2 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'galeria/galeria_2.png']);
+        Imagens::create(['descricao' => 'Galeria 3 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'galeria/galeria_3.png']);
+        Imagens::create(['descricao' => 'Galeria 4 (Tamanho recomendado em pixels: 900 x 770)', 'foto' => 'galeria/galeria_4.png']);
     }
 
     /**

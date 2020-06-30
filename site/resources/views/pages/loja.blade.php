@@ -52,7 +52,7 @@
                             <h4 class="card-title produtos-loja">
                               <a href="/loja/{{$produto->id}}">{{$produto->nome}}</a>
                             </h4>
-                            <h5 class="produtos-loja">R${{$produto->preco}}</h5>
+                            <h5 class="produtos-loja">R${{number_format($produto->preco, 2, ',', '.')}}</h5>
                             @php
                               if (strlen($produto->descricao) > 150) {
                                 $descricao = substr($produto->descricao, 0, 150).'...';
@@ -79,7 +79,7 @@
                             <h4 class="card-title produtos-loja">
                               <a href="/loja/{{$produto->id}}">{{$produto->nome}}</a>
                             </h4>
-                            <h5 class="produtos-loja">R${{$produto->preco}}</h5>
+                            <h5 class="produtos-loja">R${{number_format($produto->preco, 2, ',', '.')}}</h5>
                             @php
                               if (strlen($produto->descricao) > 150) {
                                 $descricao = substr($produto->descricao, 0, 150).'...';

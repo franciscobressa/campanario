@@ -118,8 +118,8 @@
 
               <li class="nav-item my-auto brand-desk ">
               <a href="/">
-                <div class="navbar-brand" href="#">
-                </div>  
+                <?php $img = $imagens[0]->foto ?>
+                <div class="navbar-brand" style="background-image: url(/storage/imagens/{{$img}})"></div>
               </a>         
               </li>
               
@@ -203,7 +203,8 @@
             </li>
             <li class="nav-item my-auto brand-desk ">
             <a href="/">
-              <div class="navbar-brand" href="#">
+              <?php $img = $imagens[0]->foto ?>
+              <div class="navbar-brand" style="background-image: url(/storage/imagens/{{$img}})">
               </div>  
             </a>         
             </li>
@@ -270,14 +271,7 @@
 </form>
 </header>
 
-
-
-                      
-
-     
-
-    
-      @yield('content')
+ @yield('content')
 
 <script src="{{asset('js/app.js')}}"></script>
 </body>

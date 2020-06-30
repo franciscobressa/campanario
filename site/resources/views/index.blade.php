@@ -23,7 +23,8 @@
                 distinctio veritatis nobis, ipsa doloremque ab eius ipsum rem. Accusamus dolores nisi ut 
                 reiciendis rerum autem quod, eligendi fugiat ipsa vero eaque, dolore voluptate. </p>
         </div>
-        <img src="/img/fabrica.png" class="fabrica" style="width:100%" alt="">
+        <?php $img = $imagens[4]->foto ?>
+        <img src="{{asset('storage/imagens/'.$img)}}" class="fabrica" style="width:100%" alt="">
      </div>
 
 <div class="local">
@@ -46,16 +47,20 @@
   margin-bottom: 1.5em;">Mais gostosa impossível!</h2>
         <div class="row bg galeria m-0 p-0 justify-content-between">
             <div class="foto-galeria m-0 p-0 col-xl-3 col-md-6">
-                <img src="/img/galeria/galeria1.png" class="m-0 p-0" alt="">
+                <?php $img = $imagens[5]->foto ?>
+                <img src="{{asset('/storage/imagens/'.$img)}}" class="m-0 p-0" alt="">
             </div>
             <div class="foto-galeria m-0 p-0 col-xl-3 col-md-6">
-                <img src="/img/galeria/galeria2.png" class="m-0 p-0" alt="">
+                <?php $img = $imagens[6]->foto ?>
+                <img src="{{asset('/storage/imagens/'.$img)}}" class="m-0 p-0" alt="">
             </div>
             <div class="foto-galeria m-0 p-0 col-xl-3 col-md-6">
-                <img src="/img/galeria/galeria3.png" class="m-0 p-0" alt="">
+                <?php $img = $imagens[7]->foto ?>
+                <img src="{{asset('/storage/imagens/'.$img)}}" class="m-0 p-0" alt="">
             </div>
             <div class="foto-galeria m-0 p-0 col-xl-3 col-md-6">
-                <img src="/img/galeria/galeria4.png" class="m-0 p-0" alt="">
+                <?php $img = $imagens[8]->foto ?>
+                <img src="{{asset('/storage/imagens/'.$img)}}" class="m-0 p-0" alt="">
             </div>
         </div>
         </div>

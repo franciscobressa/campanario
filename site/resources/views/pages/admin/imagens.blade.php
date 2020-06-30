@@ -3,14 +3,14 @@
 
 <div class="container-fluid ">
 
-    @foreach( $imagens as $img)
+    @foreach($imagens as $img)
     <div class="container m-0 ">
-<center>
+
   <div class="card mt-3">
     <div class="card-header">{{$img->descricao}}</div>
-    <div class="card-body text-center" style="background-image:url({{url('storage/imagens/'.$img->foto)}})">          
-    <img class="p-2" >
-</div> 
+      <div class="card-body text-center" style="background-image:url({{url('storage/imagens/'.$img->foto)}})">          
+      <img class="p-2" >
+      </div> 
            {!! Form::open(['action' => ['ImagensController@update', $img->id], 'enctype' => 'multipart/form-data']) !!}
           @csrf
           <div class="card-footer text-center">   
@@ -18,11 +18,11 @@
           <button type="submit" class="btn-primary btn alterar mt-2">Alterar Imagem</button>
           {!! Form::hidden('_method', 'PUT') !!}
           {!! Form::close() !!}</div>
+    </div>
   </div>
-</div>
 
 
-@endforeach
+    @endforeach
 
 <style>
 

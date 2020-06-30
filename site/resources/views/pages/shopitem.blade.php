@@ -48,7 +48,7 @@
           </div>
           <div class="card-body produtos-loja col-lg-5 col-md-5 col-sm-5 col-12 mt-3">
             <h3 class="card-title ">{{$produto->nome}}</h3>
-            <h4>R${{$produto->preco}}</h4>
+            <h4>R${{number_format($produto->preco, 2, ',', '.')}}</h4>
             <p class="card-text">{{$produto->descricao}}</p>
             @guest
           <form action="/login" method="GET">

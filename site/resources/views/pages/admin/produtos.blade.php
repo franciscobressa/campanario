@@ -19,7 +19,7 @@
                   <h4 class="card-title">
                     <a href="/admin/produtos/{{$produto->id}}">{{$produto->nome}}</a>
                   </h4>
-                  <h5>R$ {{$produto->preco}}</h5>
+                  <h5>R$ {{number_format($produto->preco, 2, ',', '.')}}</h5>
 
                 </div>
                 <div class="p-3">

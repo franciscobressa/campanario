@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             {!! Form::label('Preço') !!}
-            {!! Form::number('preco', $produto->preco, ['class' => 'form-control', 'step' => '0.01', 'min' => '0.01']) !!}
+            {!! Form::number('preco', number_format($produto->preco, 2, ',', '.'), ['class' => 'form-control', 'step' => '0.01', 'min' => '0.01']) !!}
         </div>
         <div class="form-group">
             {!! Form::label('Descrição') !!}

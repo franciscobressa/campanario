@@ -38,7 +38,7 @@
                     <h5>{{$pedido_produto->produto->nome}}</h5>
                     <p class="mb-3 text-muted text-uppercase small">{{$pedido_produto->produto->descricao}}</p>
 					<div >
-									<a class="col">-</a>
+									<a class="col cursor-pointer" onclick="carrinhoRemoverProduto({{$pedido->id}},{{$pedido_produto->produto_id}}, 1)">-</a>
 									<span class="col">{{$pedido_produto->qtd}}</span>
 									<a class="col cursor-pointer" onclick="carrinhoAdicionarProduto({{$pedido_produto->produto->id}})">+</a>
 								</div>
@@ -52,12 +52,13 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
-                        class="fas fa-trash-alt mr-1"></i> Remove item </a>
+                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3" onclick="carrinhoRemoverProduto({{$pedido->id}},{{$pedido_produto->produto_id}}, 0)">
+                      <i class="fas fa-trash-alt mr-1" ></i> Remove item </a>
                   </div>
                    
                   <p class="mb-0"><span><strong>R$ {{number_format($pedido_produto->produto->preco, 2, ',', '.')}}</strong></span></p>
-				  @php
+                    
+                    @php
                     $total_pedido += $pedido_produto->valores;
                     @endphp
 
@@ -67,7 +68,20 @@
           </div>
           <hr class="mb-4">
 
-		  @endforeach
+      @endforeach
+      
+      <form action="{{route('carrinho.adicionar')}}" method="post" id="form-adicionar-produto">
+        @csrf
+        <input type="hidden" name="id">
+      </form>
+
+      <form action="{{route('carrinho.remover')}}" method="post" id="form-remover-produto">
+        @csrf
+        @method('DELETE')
+        <input type="hidden" name="pedido_id">
+        <input type="hidden" name="produto_id">
+        <input type="hidden" name="item">
+      </form>
 
         </div>
       </div>

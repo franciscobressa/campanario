@@ -24,6 +24,7 @@ Route::get('/loja', 'PagesController@loja')->name('loja');
 Route::get('/loja/{id}', 'PagesController@shopItem');
 
 Route::resource('/admin/produtos', 'ProdutosController');
+
 Route::resource('/admin/imagens', 'ImagensController');
 
 Route::post('/enviar', 'ContatoController@enviaContato');
@@ -32,12 +33,12 @@ Auth::routes();
 
 Route::get('/admin', 'AdminController@admin')->name('admin')->middleware('auth');
 
-Route::get('/loja/search', 'PagesController@search');
-
 Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho')->middleware('auth');
 
 Route::get('/carrinho/adicionar', function () {
     return redirect()->back('index');
 })->middleware('auth');
 
-Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('carrinho.adicionar')->middleware('auth');
+Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('carrinho.adicionar');
+
+Route::delete('/carrinho/remover', 'CarrinhoController@remover')->name('carrinho.remover');

@@ -10936,7 +10936,7 @@ a.text-dark:focus {
 body {
   margin: 0px;
   box-sizing: border-box;
-  background-image: url(/img/banner/background.png);
+  background-image: url(/img/background.png);
 }
 
 .navbar-middle {
@@ -11007,7 +11007,6 @@ body {
 .navbar-brand {
   height: 8vw;
   width: 8vw;
-  background-image: url(/img/logo.png);
   background-size: cover;
   margin: 0 2vw;
 }

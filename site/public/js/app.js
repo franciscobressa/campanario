@@ -37346,6 +37346,13 @@ window.carrinhoAdicionarProduto = function (idproduto) {
   $('#form-adicionar-produto').submit();
 };
 
+window.carrinhoRemoverProduto = function (idpedido, idproduto, item) {
+  $('#form-remover-produto input[name="pedido_id"]').val(idpedido);
+  $('#form-remover-produto input[name="produto_id"]').val(idproduto);
+  $('#form-remover-produto input[name="item"]').val(item);
+  $('#form-remover-produto').submit();
+};
+
 /***/ }),
 
 /***/ "./resources/sass/app.scss":
@@ -37366,8 +37373,8 @@ window.carrinhoAdicionarProduto = function (idproduto) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/francisco/Dev/campanario/site/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/francisco/Dev/campanario/site/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/campanario/site/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/campanario/site/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
