@@ -117,9 +117,28 @@
               <span><strong>R$ {{number_format($total_pedido, 2, ',', '.')}}</strong></span>
             </li>
           </ul>
+<?php
+  require_once 'lib/vendor/autoload.php';
+  MercadoPago\SDK::setAccessToken('APP_USR-4172997390009660-062520-9d6060459728a17486a43964cee10028-592741310');
 
-          <button type="button" class="btn btn-primary btn-block waves-effect waves-light">Finalizar compra</button>
+  // Cria um objeto de preferência
+  $preference = new MercadoPago\Preference();
 
+  // Cria um item na preferência
+  $item = new MercadoPago\Item();
+  $item->title = 'Meu produto';
+  $item->quantity = 1;
+  $item->unit_price = $total_pedido;
+  $preference->items = array($item);
+  $preference->save();
+?>
+
+        <form action="controller/paymentController.php" method="POST">
+          <script
+          src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
+          data-preference-id="<?php echo $preference->id; ?>">
+          </script>
+        </form>
         </div>
       </div>
 </section>
