@@ -16,6 +16,11 @@ class PagesController extends Controller
         return view('index', compact('imagens'))->with('produtos', $produtos);
     }
 
+    public function teste(){
+        return view('teste');
+    }
+
+
     public function loja(){
         $produtos = Produto::paginate(24);
         $categorias = Categoria::all();

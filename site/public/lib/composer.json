@@ -1,0 +1,12 @@
+{
+    "name": "francisco/lib",
+    "authors": [
+        {
+            "name": "Francisco Bressa",
+            "email": "bressafrancisco@gmail.com"
+        }
+    ],
+    "require": {
+        "mercadopago/dx-php": "^2.0"
+    }
+}
