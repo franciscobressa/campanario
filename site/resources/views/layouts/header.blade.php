@@ -134,15 +134,10 @@
           </div>
           
             <div class="menu-box menu-box-desk">
-              <div class="container h-100">
-                <div class="d-flex justify-content-center h-100">
-                  <form action="/loja/search" class="searchbar" method="GET">
-                    @csrf
-                    <input class="search_input" type="text" name="" placeholder="Pesquisar...">
-                    <a class="search_icon"><img src="/img/icon/search.png"></a>
-                  </form>
-                </div>
+              <div id="search-input">
+                <search></search>
               </div>
+              
               @guest
               <div class="dropdown">
                 <button class="btn icon-btn ml-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

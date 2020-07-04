@@ -44,3 +44,5 @@ Route::get('/carrinho/adicionar', function () {
 Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('carrinho.adicionar');
 
 Route::delete('/carrinho/remover', 'CarrinhoController@remover')->name('carrinho.remover');
+
+Route::get('/produtos', 'ProdutosController@getProdutos');

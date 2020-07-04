@@ -1,5 +1,15 @@
 require('./bootstrap');
-require('./carrinho')
+require('./carrinho');
+
+// Vue 
+
+window.Vue = require('vue');
+
+Vue.component('search', require('./components/SearchComponent.vue').default);
+
+const app = new Vue({el: '#search-input'});
+
+// Lógica JavaScript 
 
 header = $('header').innerHeight();
 
