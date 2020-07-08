@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\Imagens;
+
 
 
 
@@ -47,7 +49,8 @@ class LoginController extends Controller
      * @return void
      */
     public function __construct()
-    {
+    {   
+        
         $this->middleware('guest')->except('logout');
     }
 }
